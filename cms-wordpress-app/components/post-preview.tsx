@@ -33,7 +33,7 @@ export default function PostPreview({
             <div className="cell">
 
               <div className="grid-x">
-                <div className="cell large-5 small-6">
+                <div className="cell large-5 small-12">
                   <div className="captions--textarea">
                     <h2><Link
                       href={`/posts/${slug}`}

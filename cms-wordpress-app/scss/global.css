@@ -7043,11 +7043,11 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova-condensed", sans-serif;
 }
 
 h1 a, h2 a, h3 a, h4 a {
-  font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova-condensed", sans-serif;
 }
 
 span, ul, ol {
@@ -7221,7 +7221,6 @@ blockquote {
 .block-btn {
   color: #000;
   height: 48px;
-  min-width: 240px;
   padding: 0 24px;
   border: 1px solid #000;
   border-radius: 2px;
@@ -7274,7 +7273,6 @@ blockquote {
 .block-btn-cta {
   color: #000;
   height: 48px;
-  min-width: 240px;
   padding: 0 24px;
   border: 1px solid #000;
   border-radius: 2px;
@@ -7771,6 +7769,7 @@ main.slideLeft {
 
 .media-module img, .media-module video {
   width: 100%;
+  height: 100vh;
 }
 
 @media print, screen and (min-width: 48em) {
@@ -7866,7 +7865,7 @@ main.slideLeft {
 
 .home-hero-module .captions h2 {
   color: var(--hero-title);
-  line-height: 1;
+  font-weight: bold;
 }
 
 .home-hero-module .captions h3 {
@@ -7877,16 +7876,12 @@ main.slideLeft {
 .home-hero-module .captions--textarea {
   border-radius: 1rem;
   padding: 2rem;
-  -webkit-backdrop-filter: blur(5px) brightness(100%);
-          backdrop-filter: blur(5px) brightness(100%);
+  -webkit-backdrop-filter: blur(15px) brightness(115%);
+          backdrop-filter: blur(15px) brightness(115%);
 }
 
 .home-hero-module .captions--textarea div p {
   font-size: 1.5rem;
-}
-
-.home-hero-module .captions:nth-child(even) {
-  border: 1px red;
 }
 
 .journalContentPage main:before {
