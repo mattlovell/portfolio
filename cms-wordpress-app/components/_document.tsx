@@ -1,12 +1,13 @@
+// pages/_document.js
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html>
       <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/qtf5lxp.css"/>
+        <link rel="stylesheet" href="..." />
       </Head>
-      <body className='homepage loaded'>
+      <body>
         <Main />
         <NextScript />
       </body>
