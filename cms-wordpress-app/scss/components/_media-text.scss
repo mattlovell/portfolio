@@ -1,0 +1,44 @@
+.media-text {
+
+    background-color: var(--mediatext-bc);
+
+    @include breakpoint(large) {
+
+        position: relative;
+
+    }
+
+    .grid-container {
+        @include breakpoint(medium down) {
+            padding: 0;
+        }
+    }
+
+    .grid-container {
+        .grid-x  {
+            .column {
+               @include breakpoint(large) {
+                    padding-left: 0;
+               }
+            }
+        }
+
+    }
+
+    @include breakpoint(large) {
+        .grid-container {
+            .grid-x     {
+                .column {
+                    .text-module {
+                       .grid-container {
+                            padding-left: 0;
+                       } 
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

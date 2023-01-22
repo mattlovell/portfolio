@@ -1,0 +1,72 @@
+.errorContentPage {
+    main {
+        padding-top: 80px;
+        background-color: $neon-yellow;
+
+        @include breakpoint(medium) {
+            min-height: 50vh;
+        }
+
+        @include breakpoint(large) {
+            padding-top: 100px;
+        }
+
+        .text-module {
+
+            position: relative;
+
+            .breadcrumbs {
+                margin-top: 160px;
+
+                @include breakpoint(medium) {
+                    width: 50%;
+                    margin-left: $medium-spacing + $xsmall-spacing;
+                    margin-top: 0;
+                }
+                
+                @include breakpoint(large) {
+                    margin-left: 80px;
+                }
+
+                &:before {
+                    font-family: $font-family-primary;
+                    content: '!';
+                    color: white;
+                    height: 100px;
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    text-align: center;
+                    font-size: 11rem;
+                    line-height: 1;
+                    width: 100%;
+
+                    @include breakpoint(medium) {
+                        display: inline-block;
+                        font-size: 13rem;
+                        top: -20px;
+                        height: 230px;
+                        margin-left: -60px;
+                        left: initial;
+                        text-align: left;
+                    }
+
+                    @include breakpoint(large) {
+                        font-size: 26rem;
+                        top: -60px;
+                        margin-left: -100px;
+                    }
+    
+                }
+
+                .text-module {
+                    @include breakpoint(medium) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}

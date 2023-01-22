@@ -1,0 +1,56 @@
+// global classes & mixins
+
+// smooths fonts on chrome and safari
+@mixin font-smoothing($value: true) {
+	@if ($value == true) {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+    } @else {
+		-moz-osx-font-smoothing: auto;
+		-webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+
+body {
+	overflow-x: hidden;
+	background-color: $white;
+	color: $black;
+
+	&.servicesLandingPage, &.errorContentPage, &.defaultContentPage, &.journalContentPage {
+		main {
+
+			padding-top: 80px;
+
+				@include breakpoint(large) {
+					padding-top: 100px;
+				}
+			}
+	}
+
+	
+}
+
+
+
+.clearpinned {
+    margin-top: 100vh; // has to match pinned panel height
+}
+
+
+.caseStudyContentPage {
+	.hero {
+		position: sticky;
+		top: 0;
+		z-index: -1;
+	}
+}
+
+.homeLandingPage {
+	main {
+		.full-bleed-cta, .journal-listing {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}

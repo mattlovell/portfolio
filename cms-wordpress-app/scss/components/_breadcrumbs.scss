@@ -1,0 +1,32 @@
+.breadcrumbs {
+
+    margin-bottom: $xsmall-spacing;
+
+    @include breakpoint(large) {
+        margin-bottom: $small-spacing;
+    }
+
+    a {
+        color: $black;
+    }
+
+    span {       
+        font-size: rem-calc(12px);
+        line-height: rem-calc(12px);
+        color: var(--breadcrumb);
+
+        &.breadcrumbNav {
+            font-weight: bold;
+        }
+        
+        &.breacrumbText {
+            font-weight: normal;
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(20px);
+            line-height: rem-calc(32px); 
+        }
+    }
+ 
+}

@@ -11,26 +11,48 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
-      <div className="mb-5">
-        {coverImage && (
-          <CoverImage title={title} coverImage={coverImage} slug={slug} />
-        )}
+    <div className='home-hero-module'>
+      <div className="grid-container full hero full-background pinned">
+
+      <div className="grid-x ">
+          <div className="cell large-12 ">
+
+            <div className="hero-content">
+              <div className="media-module">
+                {coverImage && (
+                  <CoverImage title={title} coverImage={coverImage} slug={slug} />
+                )}
+              </div>
+            </div>
+          </div>
+          </div>
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link
-          href={`/posts/${slug}`}
-          className="hover:underline"
-          dangerouslySetInnerHTML={{ __html: title }}
-        ></Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <Date dateString={date} />
-      </div>
-      <div
-        className="text-lg leading-relaxed mb-4"
-        dangerouslySetInnerHTML={{ __html: excerpt }}
-      />
-    </div>
+      <div className="captions">
+        <div className="grid-container">
+          <div className="grid-x">
+            <div className="cell">
+
+              <div className="grid-x">
+                <div className="cell large-5 small-6">
+                  <div className="captions--textarea">
+                    <h2><Link
+                      href={`/posts/${slug}`}
+                      className="hover:underline"
+                      dangerouslySetInnerHTML={{ __html: title }}
+                    ></Link></h2>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: excerpt }}
+                    />
+                    <a href={`/posts/${slug}`} className="block-btn-cta">Read more</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+           </div>
+          </div>
+         </div>
+
+
   )
 }

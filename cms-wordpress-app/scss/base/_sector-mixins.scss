@@ -1,0 +1,57 @@
+
+
+// to refactor for v2
+
+@mixin pull-text-up($distance) {
+    transform: translateY(-$distance);
+    margin-bottom: -($distance/2);
+}
+
+
+@mixin block-button($colour, $hoverColour, $background) {
+
+    color: $colour;
+    height: 48px;
+    min-width: 240px;
+    padding: 0 24px;
+    border: 1px solid $colour;
+    border-radius: 2px;
+    line-height: 48px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 40px 0 0 0;
+    position: relative;
+    transition: color 400ms;
+    border-radius: 1em;
+
+    &:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color:  $background;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform-origin: 100% 100%;
+        transition: transform 400ms cubic-bezier(.160,.85,.45,1) 0s;
+        transform: scaleX(0);
+        border-radius: 1em;
+
+    }   
+
+    &:hover {
+        color: $hoverColour;
+        
+        &:before {
+            transform-origin: 0 100%;
+            transform: scaleX(1);
+        }
+    }
+
+}

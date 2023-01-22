@@ -1,0 +1,41 @@
+.text-hero {
+
+    background-color: var(--texthero-bc);
+
+
+    h2 {
+        color: var(--texthero-titleColor);
+        line-height: 1;
+        font-weight: 600;
+    }
+
+    h3 {
+        color: var(--texthero-subtitleColor);
+        line-height: 1;
+        font-weight: 200;
+
+        @include breakpoint(large) {
+            font-size: rem-calc(64px);
+            width: 60%;
+        }
+    }
+
+
+    body.contactUsContentPage &, 
+    body.journalsLandingPage &, 
+    body.defaultContentPage &, 
+    body.errorContentPage &,
+    body.studioLandingPage &,
+    body.servicesLandingPage {
+        
+        padding-top: $medium-spacing*2;
+        padding-bottom: $medium-spacing;
+
+        @include breakpoint(large) {
+            padding-top: $large-spacing*2;
+            padding-bottom: $large-spacing;
+        }
+
+    }
+
+}

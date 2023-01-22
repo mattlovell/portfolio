@@ -1,0 +1,62 @@
+// default
+a {
+    color: $dark-grey;
+    transition: color ease 1s;
+    outline: none;
+
+    &:hover, &:focus {
+        color: $black;
+    }
+
+}
+
+a.underline {
+
+    display: inline-block;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 1px;
+        background-color: $neon-yellow;
+        transition: width .25s;
+
+    }
+    
+    &:hover {
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+
+.social-links {
+    a {
+        svg {
+
+            width: 24px;
+            height: 24px;
+            margin-right: $xsmall-spacing;
+
+            @include breakpoint(large) {
+                width: 32px;
+                height: 32px;
+            }
+
+        }
+
+        &:hover {
+            svg {
+
+                path {
+                    fill: $neon-yellow;
+
+                }
+            }
+        }
+
+    }
+}

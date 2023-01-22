@@ -1,0 +1,7 @@
+.block-btn {
+  @include block-button($black, $dark-grey, $petrol);
+}
+
+.block-btn-cta {
+  @include block-button($black, $white, $petrol);
+}

@@ -1,0 +1,18 @@
+.text-module {
+
+    h2 {
+        color: var(--textmod-titleColor);
+
+        @include breakpoint(large) {
+            font-size: rem-calc(56px);
+        }
+    }
+
+    h3 {
+        color: var(--textmod-subtitleColor);
+
+        @include breakpoint(large) {
+            width: 60%;
+        }
+    }
+}

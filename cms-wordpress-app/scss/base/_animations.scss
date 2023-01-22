@@ -1,0 +1,26 @@
+$slow-speed: 2s;
+$medium-speed: 1s;
+$fast-speed: 0.5s;
+
+body {
+    transition: opacity ease $medium-speed;
+    opacity: 0;
+
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+video {
+    transition: all ease $slow-speed;
+}
+
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fadeOut {
+    opacity: 0;
+}

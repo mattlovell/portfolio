@@ -1,0 +1,51 @@
+.offices {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $medium-spacing;
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+        margin-bottom: $large-spacing;
+    }
+
+    .office {
+
+        display: flex;
+        margin: $medium-spacing 0;
+
+
+        @include breakpoint(large) {
+            margin: $small-spacing + $medium-spacing 0;
+        }
+
+
+        p {
+            margin: 0;
+            font-size: rem-calc(14px);
+
+            @include breakpoint(large) {
+                font-size: rem-calc(20px);
+            }
+        }
+        
+        .office-name {
+            color: $grey;
+            margin-bottom: $small-spacing;
+            font-size: rem-calc(32px);
+
+            @include breakpoint(large) {
+                font-size: rem-calc(48px);
+                margin-bottom: $medium-spacing;
+            }
+        } 
+
+        .office-address {
+            margin: 0;
+        }
+
+        .office-map-link {
+            
+        }
+    }
+}

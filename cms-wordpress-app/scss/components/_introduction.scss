@@ -1,0 +1,43 @@
+.introduction {
+
+    background-color: var(--intro-bc);
+    .grid-container {
+        .grid-x {
+            .column {
+                @include breakpoint(medium down) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .introduction-title, .introduction-text {
+        color: var(--intro-title);
+    }
+
+    .introduction-subtitle {
+        color: var(--intro-subtitle);
+    }
+
+
+
+    .deliverables {
+        column-count: 2;
+        width: 100%;
+        margin-bottom: $medium-spacing;
+        
+        @include breakpoint(large) {
+            @include pull-text-up($large-spacing);
+            margin-left: $medium-spacing;
+            margin-bottom: 0;
+
+        }
+        
+        .deliverables-title {
+            font-weight: 400;
+        }
+        span {
+            display: block;
+        }
+    }
+}

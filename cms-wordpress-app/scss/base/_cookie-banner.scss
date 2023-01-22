@@ -1,0 +1,51 @@
+@mixin center-cookie-content {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(large) {
+        height: 100px;
+    }
+}
+
+.cookie-banner {
+    background-color: $neon-yellow;
+    color: $black;
+    position: sticky;
+    bottom: 0;
+
+
+    &.hide {
+        display: none;
+    }
+    
+    @include breakpoint(large) {
+        height: 100px;
+    }
+
+    .cookie-banner-title {
+        color: $black;
+        @include breakpoint(large) {
+            line-height: 100px;
+        }
+    }
+
+    .cookie-banner-copy {
+        @include center-cookie-content();
+
+
+        p {
+            color: $black;
+            font-size: rem-calc(14px);
+            line-height: rem-calc(20px);
+            margin: 0;
+        }
+    }
+
+    .controls {
+        @include center-cookie-content();
+        
+        button {
+            margin: 0;
+        }
+    }
+}

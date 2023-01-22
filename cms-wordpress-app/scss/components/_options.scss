@@ -1,0 +1,60 @@
+// wrapper options
+// these are used by umbraco DO NOT DELETE
+
+
+@include breakpoint(large) {
+
+    .margin-top-small {
+        margin-top: $small-spacing;
+    }
+    .margin-top-medium {
+        margin-top: $medium-spacing;
+    }
+    .margin-top-large {
+        margin-top: $large-spacing;
+    }
+    
+    
+    .margin-bottom-small {
+        margin-bottom: $small-spacing;
+    }
+    .margin-bottom-medium {
+        margin-bottom: $medium-spacing;
+    }
+    .margin-bottom-large {
+        margin-bottom: $large-spacing;
+    }
+    
+    
+    .padding-top-small {
+        padding-top: $small-spacing;
+    }
+    .padding-top-medium {
+        padding-top: $medium-spacing;
+    }
+    .padding-top-large {
+        padding-top: $large-spacing;
+    }
+    
+    
+    
+    .padding-bottom-small {
+        padding-bottom: $small-spacing;
+    }
+    .padding-bottom-medium {
+        padding-bottom: $medium-spacing;
+    }
+    .padding-bottom-large {
+        padding-bottom: $large-spacing;
+    }
+    
+}
+
+.pinned {
+    position: sticky;
+    top: 0;
+}
+
+.pull-text-up {
+    @include pull-text-up($xlarge-spacing);
+}

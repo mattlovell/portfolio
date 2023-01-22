@@ -1,0 +1,76 @@
+.partnerships {
+
+    margin: $medium-spacing 0;
+
+    @include breakpoint(large) {
+        margin: $large-spacing 0;
+    }
+
+    h2 {
+        color: var(--partnerships-title);
+    }
+    
+    h3 {
+        opacity: 0.5;
+    }
+
+    h4 {
+        font-weight: 400;
+        font-size: rem-calc(20px);
+        line-height: rem-calc(32px);
+        margin: 0;
+    }
+    .services-list-holder {
+
+        display: flex;
+        margin: $medium-spacing 0 0 0;
+        flex-direction: column;
+
+        @include breakpoint(large){
+            margin: $large-spacing 0 0 0;
+            flex-direction: row;
+        }
+
+        .services-list {
+            flex-basis: 50%; flex-grow: 1;
+            margin-bottom: $medium-spacing;
+
+            @include breakpoint(large) {
+                margin-right: $small-spacing;
+                flex-basis: 25%; flex-grow: 1;
+            }
+        }
+
+
+        .services-columns {
+            width: 100%;
+            column-count: 2;
+
+            @include breakpoint(large) {
+                column-count: 4;
+            }
+        }
+        
+    }
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            font-size: rem-calc(14px);
+            line-height: rem-calc(20px);
+
+            @include breakpoint(large) {
+                font-size: rem-calc(20px);
+                line-height: rem-calc(32px);
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,98 @@
+footer {
+    display: block;
+    background-color: $dark-grey;
+    margin: 0;
+    position: relative;
+    color: $white;
+    text-align: center;
+
+    @include breakpoint(medium) {
+        text-align: left;
+    }
+
+    @include breakpoint(small only) {
+        .grid-container {
+            padding: 0;
+        }
+    }
+    h6, p, span, ul, ol, a {
+        font-size: rem-calc(13px);
+        margin: 0;
+        padding: 0;
+        color: $white;
+    }
+
+    .footer-title {
+        margin-bottom: $xsmall-spacing;
+    }
+    
+    a {
+        display: block;
+       
+        &:hover, &:focus {
+            color: $neon-yellow;
+        }
+    }
+
+    a[target=_blank] {
+        display: inline-block;
+    }
+
+
+    ul {
+        list-style-type: none;
+    }
+
+    .cell {
+
+        padding: $medium-spacing;
+
+        @include breakpoint(large) {
+            padding: $xlarge-spacing 0 $medium-spacing 0;
+        }
+
+        &.alt {
+            background-color: #333;
+
+            @include breakpoint(large) {
+                background-color: transparent;
+
+                &:before {
+                    content: '';
+                    background-color: #333;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    z-index: 0;
+                    margin-left: -$medium-spacing;
+                    height: 100%;
+                    width: 100%;
+    
+                }
+            }
+
+
+            .holder {
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        &.copyright {
+            font-size: rem-calc(11px);
+            padding-top: 0;
+            background-color: #333;
+
+            span {
+                color: $grey;
+            }
+
+            @include breakpoint(large) {
+                background-color: transparent;
+                margin-top: $medium-spacing * 2;
+            }
+
+        }
+
+    }
+}

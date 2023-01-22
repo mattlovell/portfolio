@@ -1,0 +1,217 @@
+.journalContentPage {
+    
+    main {
+        &:before {
+            content: '';
+            background-color: $light-grey; // set as variable
+            width: 40%;
+            height: 100vh;
+            display: inline-block;
+            position: fixed;
+            left: 0;
+            top: 100px;
+            z-index: -1;
+        }
+    }
+}
+
+.journalsLandingPage  {
+    .journal-featured {
+        .grid-padding-x {
+            @include breakpoint(large) {
+                margin:0;
+            }
+
+        }
+    }
+}
+
+.journal { // maybe move this into parent
+   
+    .journal-headings {
+        padding: $large-spacing;
+    }
+
+    .textbox {
+        padding: $large-spacing;
+    }
+
+    .pullright {
+        right: rem-calc(-15px);
+        position: relative;
+    }
+
+}
+
+.journal-featured {
+
+    .grid-container {
+        @include breakpoint(medium down) {
+            padding: 0;
+        }
+
+    }
+
+    .journal-featured-title {
+        font-size: rem-calc(40px);
+        line-height: 1;
+    }
+
+    .journal-featured-subtitle {
+        font-size: rem-calc(40px);
+        line-height: 1;
+        color: $grey;
+    }
+
+    p {
+        color: $grey;
+    }
+
+    .journal-image-holder {
+        @include breakpoint(large) {
+            position: relative;
+            margin-top: $medium-spacing;
+            width: auto;
+    
+            img {
+                position: relative;
+                width: 65vw;
+                display: block;
+                max-width: initial;
+                left: -80px;
+            }
+        }
+    }
+}
+
+.journal-listing {
+    
+    background-color: $light-grey;
+    margin: $medium-spacing 0 0 0;
+    padding: $medium-spacing 0;
+ 
+    @include breakpoint(large) {
+        margin: $large-spacing 0 0 0;
+        padding: $large-spacing 0;
+       
+    }
+
+    body.homeLandingPage & {
+        min-height: 100%;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+
+        .breadcrumbs {
+            display: none;
+        }
+
+        @include breakpoint(large){
+            height: 100vh;
+            padding: $xlarge-spacing 0;
+        }
+
+    }
+
+    .journal-breadcrumb {
+        font-size: rem-calc(14px);
+        line-height: rem-calc(16px);
+    }
+    .journal-title {
+        font-size: rem-calc(40px);
+        line-height: 1;
+        margin-top: $small-spacing;
+    }
+
+    .journal-subtitle {
+        font-size: rem-calc(40px);
+        line-height: 1;
+        color: $grey;
+        margin-top: $small-spacing;
+    }
+}
+
+
+.journalContentPage {
+    .journal-main-content {
+
+        .text-module {
+            @include breakpoint(medium down) {
+                padding: 0;
+
+
+                .column {
+                    padding: 0;
+                }
+
+                .grid-container {
+                    padding: 0;
+                }
+            }
+        }
+
+        .media-text {
+
+            @include breakpoint(medium down) {
+                padding: 0;
+
+
+                .column {
+                    padding: 0;
+                }
+
+                .grid-container {
+                    padding: 0;
+                }
+            }
+
+
+            @include breakpoint(large) {
+                position: relative;
+                left: -$xlarge-spacing;
+                width: 54vw;
+                padding: 0 0 $xlarge-spacing 0;
+
+                .column {
+                    padding: 0;
+                }
+
+                .column ~ .column {
+                    transform: translateX($small-spacing + $xsmall-spacing);
+                }
+
+                .grid-container {
+                    padding: 0;
+                }
+
+                .media-module {
+                    position: initial;
+                    left: initial;
+                    width: initial;
+                    padding: initial;
+                }
+            }
+        }
+
+        .media-module {
+
+            //padding: $grid-column-gutter/2;
+
+            @include breakpoint(large) {
+                position: relative;
+                left: -$xlarge-spacing;
+                width: 56vw;
+                padding: 0 0 $xlarge-spacing 0;
+            }
+        }
+
+        .text-module {
+            @include breakpoint(large) {
+                padding: $medium-spacing 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.cta-textmodule {
+    
+    align-self: center;
+
+    @include breakpoint(large) {
+        .grid-container {
+            padding: 0;
+        }
+    }
+
+    .cell {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+
+        .cta-text {
+    
+            .cta-title {
+                color: var(--cta-title)
+            }
+        
+            .cta-subtitle {
+                color: var(--cta-subtitle);
+            }
+        }
+    
+    }
+
+   
+}

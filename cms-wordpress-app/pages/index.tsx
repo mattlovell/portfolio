@@ -2,11 +2,10 @@ import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import Container from '../components/container'
 import AllStories from '../components/all-stories'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Navigation from '../components/navigation'
 import { getAllPostsForHome } from '../lib/api'
-
+import Intro from '../components/intro'
 
 export default function Index({ allPosts: { edges }, preview }) {
 /*  const heroPost = edges[0]?.node
@@ -21,7 +20,7 @@ export default function Index({ allPosts: { edges }, preview }) {
       <Navigation></Navigation>
 
       <Container>
-        <Intro />
+        <Intro></Intro>
         {<AllStories posts={allThePosts}/>}
       </Container>
     </Layout>

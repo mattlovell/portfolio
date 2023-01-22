@@ -1,0 +1,16 @@
+// to delete
+
+.caption {
+    width: 33%; // use columns widths
+    background-color: grey;
+    color: $black;
+    padding: $medium-spacing;
+    margin:  $medium-spacing;
+
+    &.align-right {
+        margin-left: auto;
+    }
+    &.align-left {
+        margin-right: auto;
+    }
+}

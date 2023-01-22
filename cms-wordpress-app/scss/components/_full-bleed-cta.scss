@@ -1,0 +1,41 @@
+.full-bleed-cta {
+    height: 100vh;
+    background-color: $neon-yellow;
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint(large) {
+        display: flex;
+
+        .row {
+            .column {
+                padding: 0;
+            }
+        }
+    }
+
+    @include breakpoint(small only) {
+        .grid-container {
+            padding: 0;
+        }
+    }
+
+
+    .panel-left {
+        height: 100vh;
+    }
+
+    .panel-right {
+        height: 100vh;
+        background-color: $dark-grey;
+
+        @include breakpoint(large) {
+            width: 50vw;
+        }
+
+        video {
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+// custom fonts
+$font-family-secondary: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$font-family-secondary-light: "aktiv-grotesk-thin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$font-family-primary: "proxima-nova-condensed", sans-serif;
+
+
+
+body {
+    font-family: $font-family-secondary;
+    @include font-smoothing(true)
+}
+
+h1,h2,h3,h4 {
+    font-family: $font-family-secondary;
+    & a {
+        font-family: $font-family-secondary; 
+    }
+}
+span, ul, ol {
+    font-family: $font-family-secondary;
+    font-weight: 300;
+    font-size: rem-calc(14px);
+    line-height: 1.4;
+    @include breakpoint(large){
+        font-size: rem-calc(20px);
+    }
+}
+
+
+p {
+    font-family: $font-family-primary;
+    font-weight: 300;
+    font-size: rem-calc(14px);
+    line-height: 1.4;
+    margin-bottom: 24px;
+
+    @include breakpoint(large){
+        font-size: rem-calc(18px);
+    }
+    
+    strong {
+        font-weight: 500;
+        line-height: 1.4;
+    }
+}
+
+.pre-title {
+    font-family: $font-family-secondary;
+    font-size: rem-calc(14px);
+    line-height: 1;
+    letter-spacing: 0em;
+
+    strong {
+        font-weight: 700;
+    }
+}
