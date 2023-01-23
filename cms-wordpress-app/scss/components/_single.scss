@@ -1,0 +1,21 @@
+.single {
+    .captions {
+
+        h1 {
+            font-size: 4rem;
+        }
+        span {
+            font-size: 2rem;
+        }
+
+        .title {
+            &--white {
+                color: white;
+            }
+            &--transparent {
+                color: black;
+            }
+
+        }
+    }
+}

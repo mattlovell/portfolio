@@ -6,6 +6,7 @@ footer {
     color: $white;
     text-align: center;
 
+
     @include breakpoint(medium) {
         text-align: left;
     }

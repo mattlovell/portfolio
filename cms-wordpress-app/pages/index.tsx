@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import Container from '../components/container'
-import AllStories from '../components/all-stories'
+//import AllStories from '../components/all-stories'
 import AllStoriesAlt from '../components/all-stories-alt'
 import Layout from '../components/layout'
-import Navigation from '../components/navigation'
+//import Navigation from '../components/navigation'
 import { getAllPostsForHome2 } from '../lib/api'
 import Intro from '../components/intro'
 
@@ -19,7 +19,7 @@ export default function Index({preview, testPosts:{nodes} }) {
       <Head>
         <title>MJLOVELL.com - Works and Work In Progress</title>
       </Head>
-      <Navigation></Navigation>
+
 
       <Container>
         <Intro></Intro>

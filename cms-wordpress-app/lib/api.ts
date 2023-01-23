@@ -97,7 +97,7 @@ export async function getAllPostsForHome2(preview) {
   const data = await fetchAPI(
     `
     query AllPosts {
-      posts(first: 20, where: {orderby: {field: TITLE, order: ASC}}) {
+      posts(first: 20, where: {orderby: {field: TITLE, order: DESC}}) {
         nodes {
           title
           excerpt

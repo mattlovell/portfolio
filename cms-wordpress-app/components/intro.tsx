@@ -26,14 +26,14 @@ export default function Intro() {
             <div className="grid-x align-center-middle text-center">
               <div className="cell small-12">
                 <div className="captions--textarea">
-                  <h1>Works & Works in Progress</h1>
-                  <h3>Scroll down to see what I've been making</h3>
+                  <h1>Things I've made, and Things I'm making</h1>
+                  <h3>Scroll down to see more</h3>
                 </div>
               </div>
               <div className='cell small-12'>
                 <div className='grid-x align-center-middle'>
                 <Image
-                    src={scrollImg} alt="Logo"
+                    src={scrollImg} alt="Down"
                     width={50}
                     height={50}></Image>
                 </div>

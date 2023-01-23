@@ -2,6 +2,15 @@
     // default styles
     position: relative;
     z-index: 1;
+    margin-bottom: 4rem;
+
+    .blur {
+        img {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+    }
 
     .homeLandingPage & {
         position: sticky;
@@ -53,16 +62,6 @@
         top: 50%;
         transform: translateY(-50%);
         width: 100%;
-        color: $black; // remove when variables set up
-
-        h2 {
-            color: var(--hero-title);
-        }
-
-        h3 {
-            color: var(--hero-subtitle);
-            line-height: 1;
-        }
     }
 
 }

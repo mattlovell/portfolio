@@ -2,10 +2,10 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Container from '../../components/container'
+import ContainerSingle from '../../components/container-single'
 import PostBody from '../../components/post-body'
 import MoreStories from '../../components/more-stories'
-import Header from '../../components/header'
+// import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import SectionSeparator from '../../components/section-separator'
 import Layout from '../../components/layout'
@@ -28,10 +28,10 @@ export default function Post({ post, posts, preview }) {
       <Head>
         <title>MJLOVELL.com - Works and Work In Progress</title>
       </Head>
-      <Navigation></Navigation>
 
-      <Container>
-        <Header />
+
+      <ContainerSingle>
+        {/* <Header /> */}
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -51,6 +51,7 @@ export default function Post({ post, posts, preview }) {
                 coverImage={post.featuredImage}
                 date={post.date}
                 categories={post.categories}
+                customStyling={post.customStyling}
               />
               <PostBody content={post.content} />
               <footer>
@@ -58,11 +59,11 @@ export default function Post({ post, posts, preview }) {
               </footer>
             </article>
 
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            {/* <SectionSeparator />
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
           </>
         )}
-      </Container>
+      </ContainerSingle>
     </Layout>
   )
 }

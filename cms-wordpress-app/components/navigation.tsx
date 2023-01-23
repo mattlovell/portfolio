@@ -7,7 +7,7 @@ export default function Navigation() {
         <div className="grid-container">
           <div className="grid-x">
               <div className="cell">
-                <div className="grid-container">
+                <div className="">
                     <nav className='navigation '>
                     <Link  className="homepage-link" href={`/`}>
                         <div className='logo'>

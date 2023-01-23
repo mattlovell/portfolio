@@ -186,7 +186,7 @@ nav.navigation {
 
 
 header {
-    transition: background-color, width ease $fast-speed/2;
+    transition: background-color, width ease $fast-speed*0.5;
     left: 0;
     background-color: transparent;
 

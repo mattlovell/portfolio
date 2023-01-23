@@ -6298,7 +6298,6 @@ blockquote {
   margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
-  border-radius: 1em;
 }
 .block-btn:before {
   content: "";
@@ -6312,7 +6311,6 @@ blockquote {
   transform-origin: 100% 100%;
   transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
   transform: scaleX(0);
-  border-radius: 1em;
 }
 .block-btn:hover {
   color: #222222;
@@ -6339,7 +6337,6 @@ blockquote {
   margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
-  border-radius: 1em;
 }
 .block-btn-cta:before {
   content: "";
@@ -6353,12 +6350,50 @@ blockquote {
   transform-origin: 100% 100%;
   transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
   transform: scaleX(0);
-  border-radius: 1em;
 }
 .block-btn-cta:hover {
   color: #fff;
 }
 .block-btn-cta:hover:before {
+  transform-origin: 0 100%;
+  transform: scaleX(1);
+}
+
+.textarea--white .block-btn-cta {
+  color: #fff;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  line-height: 48px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 40px 0 0 0;
+  position: relative;
+  transition: color 400ms;
+}
+.textarea--white .block-btn-cta:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: 100% 100%;
+  transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
+  transform: scaleX(0);
+}
+.textarea--white .block-btn-cta:hover {
+  color: #fff;
+}
+.textarea--white .block-btn-cta:hover:before {
   transform-origin: 0 100%;
   transform: scaleX(1);
 }
@@ -6713,6 +6748,10 @@ main.slideLeft {
   .media-module img, .media-module video {
     height: 100vh;
   }
+}
+.media-module figure.wp-block-embed.is-type-video iframe {
+  width: 100%;
+  height: 100%;
 }
 .media-module .video-fallback {
   background-color: #000;
@@ -7131,6 +7170,13 @@ body.homeLandingPage .journal-listing .breadcrumbs {
 .landscape {
   position: relative;
   z-index: 1;
+  margin-bottom: 4rem;
+}
+.landscape .blur img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
 .homeLandingPage .landscape {
   position: -webkit-sticky;
@@ -7171,14 +7217,6 @@ body.homeLandingPage .journal-listing .breadcrumbs {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  color: #000;
-}
-.landscape .captions h2 {
-  color: var(--hero-title);
-}
-.landscape .captions h3 {
-  color: var(--hero-subtitle);
-  line-height: 1;
 }
 
 .media-text {
@@ -7421,4 +7459,77 @@ body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.
   .errorContentPage main .text-module .breadcrumbs .text-module {
     margin-left: 0;
   }
+}
+
+.post-body {
+  margin: 4rem 0;
+}
+.post-body .wordpress-content p {
+  font-size: 2.25rem;
+}
+.post-body .wordpress-content p a {
+  color: #000;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  line-height: 48px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 40px 0 0 0;
+  position: relative;
+  transition: color 400ms;
+}
+.post-body .wordpress-content p a:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #0F52BA;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: 100% 100%;
+  transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
+  transform: scaleX(0);
+}
+.post-body .wordpress-content p a:hover {
+  color: #fff;
+}
+.post-body .wordpress-content p a:hover:before {
+  transform-origin: 0 100%;
+  transform: scaleX(1);
+}
+.post-body .wordpress-content figure.wp-block-embed__wrapper {
+  width: 100%;
+  height: auto;
+}
+.post-body .wordpress-content figure.wp-block-image {
+  float: left;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+}
+.post-body .wordpress-content figure.wp-block-image.alignfull.size-full {
+  margin-bottom: 2rem;
+}
+.post-body .wordpress-content figure.wp-block-embed.is-type-video iframe {
+  width: 100%;
+}
+
+.single .captions h1 {
+  font-size: 4rem;
+}
+.single .captions span {
+  font-size: 2rem;
+}
+.single .captions .title--white {
+  color: white;
+}
+.single .captions .title--transparent {
+  color: black;
 }/*# sourceMappingURL=global.css.map */

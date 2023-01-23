@@ -1,0 +1,34 @@
+.post-body {
+   // figure.wp-block-embed.is-type-video iframe {width: 100%;height: 100%;}
+   margin: 4rem 0;
+
+    .wordpress-content {
+
+        p {
+            font-size: 2.25rem;
+
+
+            a {
+                @include block-button($black, $white, $bright-blue);
+            }
+        }
+
+        figure.wp-block-embed__wrapper {
+            width: 100%;
+            height: auto;
+        }
+        figure.wp-block-image {
+            float: left;
+            padding-right: 2rem;
+            margin-bottom: 2rem;
+        }
+        figure.wp-block-image.alignfull.size-full {
+            margin-bottom: 2rem;
+            }
+
+        figure.wp-block-embed.is-type-video iframe {
+           width: 100%;
+        }
+
+    }
+}

@@ -4,7 +4,7 @@
 
 @mixin pull-text-up($distance) {
     transform: translateY(-$distance);
-    margin-bottom: -($distance/2);
+    margin-bottom: -($distance*0.5);
 }
 
 
@@ -26,7 +26,6 @@
     margin: 40px 0 0 0;
     position: relative;
     transition: color 400ms;
-    border-radius: 1em;
 
     &:before {
         content: "";
@@ -40,13 +39,11 @@
         transform-origin: 100% 100%;
         transition: transform 400ms cubic-bezier(.160,.85,.45,1) 0s;
         transform: scaleX(0);
-        border-radius: 1em;
 
-    }   
+    }
 
     &:hover {
         color: $hoverColour;
-        
         &:before {
             transform-origin: 0 100%;
             transform: scaleX(1);
