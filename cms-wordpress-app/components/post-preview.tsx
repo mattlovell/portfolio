@@ -1,15 +1,15 @@
-import Avatar from './avatar'
-import Date from './date'
 import CoverImage from './cover-image'
-import Link from 'next/link'
-
+import Captions from './captions'
 export default function PostPreview({
   title,
   coverImage,
-  date,
   excerpt,
+  date,
   slug,
-}) {
+  customStyling
+})
+ {
+
   return (
     <div className='home-hero-module'>
       <div className="grid-container full hero full-background pinned">
@@ -27,31 +27,9 @@ export default function PostPreview({
           </div>
           </div>
       </div>
-      <div className="captions">
-        <div className="grid-container">
-          <div className="grid-x">
-            <div className="cell">
+      <Captions title={title} excerpt={excerpt} customStyling={customStyling} slug={slug} />
 
-              <div className="grid-x">
-                <div className="cell large-5 small-12">
-                  <div className="captions--textarea">
-                    <h2><Link
-                      href={`/posts/${slug}`}
-                      className="hover:underline"
-                      dangerouslySetInnerHTML={{ __html: title }}
-                    ></Link></h2>
-                    <div
-                      dangerouslySetInnerHTML={{ __html: excerpt }}
-                    />
-                    <a href={`/posts/${slug}`} className="block-btn-cta">Read more</a>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-           </div>
-          </div>
-         </div>
+    </div>
 
 
   )

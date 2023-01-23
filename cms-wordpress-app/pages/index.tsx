@@ -2,15 +2,17 @@ import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import Container from '../components/container'
 import AllStories from '../components/all-stories'
+import AllStoriesAlt from '../components/all-stories-alt'
 import Layout from '../components/layout'
 import Navigation from '../components/navigation'
-import { getAllPostsForHome } from '../lib/api'
+import { getAllPostsForHome2 } from '../lib/api'
 import Intro from '../components/intro'
 
-export default function Index({ allPosts: { edges }, preview }) {
+export default function Index({preview, testPosts:{nodes} }) {
 /*  const heroPost = edges[0]?.node
   const morePosts = edges.slice(1)*/
-  const allThePosts = edges;
+ // const allThePosts = edges;
+  const stuff = nodes;
 
   return (
     <Layout preview={preview}>
@@ -21,17 +23,16 @@ export default function Index({ allPosts: { edges }, preview }) {
 
       <Container>
         <Intro></Intro>
-        {<AllStories posts={allThePosts}/>}
+        {<AllStoriesAlt posts={stuff}/>}
       </Container>
     </Layout>
   )
 }
 
 export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const allPosts = await getAllPostsForHome(preview)
-
+  const testPosts = await getAllPostsForHome2(preview)
   return {
-    props: { allPosts, preview },
+    props: { testPosts, preview },
     revalidate: 10,
   }
 }

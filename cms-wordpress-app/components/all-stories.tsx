@@ -13,6 +13,7 @@ export default function AllStories({ posts }) {
             date={node.date}
             slug={node.slug}
             excerpt={node.excerpt}
+            customStyling={node.customStyling}
           />
         ))}
       </div>

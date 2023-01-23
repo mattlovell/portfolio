@@ -75,16 +75,41 @@ export async function getAllPostsForHome(preview) {
                 sourceUrl
               }
             }
-            author {
-              node {
-                name
-                firstName
-                lastName
-                avatar {
-                  url
-                }
-              }
+            customStyling {
+              backgroundcolor
             }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  )
+
+  return data?.posts
+}
+export async function getAllPostsForHome2(preview) {
+  const data = await fetchAPI(
+    `
+    query AllPosts {
+      posts(first: 20, where: {orderby: {field: TITLE, order: ASC}}) {
+        nodes {
+          title
+          excerpt
+          slug
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          customStyling {
+            backgroundcolor
           }
         }
       }
@@ -129,6 +154,9 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
         node {
           sourceUrl
         }
+      }
+      customStyling {
+        backgroundcolor
       }
       author {
         node {
