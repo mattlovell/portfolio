@@ -6795,9 +6795,13 @@ main.slideLeft {
   padding: 2rem;
   -webkit-backdrop-filter: blur(15px) brightness(115%);
           backdrop-filter: blur(15px) brightness(115%);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.25);
+}
+.home-hero-module .captions .textarea--white h2 a {
+  color: white;
 }
 .home-hero-module .captions .textarea--white div p {
+  color: white;
   font-size: 1.5rem;
 }
 .home-hero-module .captions .textarea--transparent {
