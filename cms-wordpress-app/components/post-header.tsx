@@ -1,5 +1,3 @@
-import Avatar from './avatar'
-import Date from './date'
 import CoverImage from './cover-image'
 import PostTitle from './post-title'
 import Categories from './categories'
@@ -24,7 +22,7 @@ export default function PostHeader({
           <div className="grid-x">
             <div className="cell small-12">
     
-              <div className={`title--${customStyling.backgroundcolor}`}>
+              <div className={`textarea--${customStyling.backgroundcolor}`}>
                 <PostTitle>{title}</PostTitle>
                 <Categories categories={categories} />
               </div>

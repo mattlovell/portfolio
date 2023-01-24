@@ -68,9 +68,9 @@ nav.navigation {
         top: 0;
         flex-direction: column;
 
-        @media screen and #{breakpoint(landscape)} and #{breakpoint(small only)} {
-            padding: $medium-spacing $medium-spacing $medium-spacing $xlarge-spacing;
-        }
+        // @media screen and #{breakpoint(landscape)} and #{breakpoint(small only)} {
+        //     padding: $medium-spacing $medium-spacing $medium-spacing $xlarge-spacing;
+        // }
 
         @include breakpoint(medium down) {
             transform: translateX(100%);
@@ -82,7 +82,7 @@ nav.navigation {
                 opacity: 1;
                 display: flex;
                 transform: translateX(30px);
-                background-color: $neon-yellow;
+                background-color: $bright-blue;
 
                 li {
                     opacity: 1;
@@ -143,14 +143,14 @@ nav.navigation {
                 color: $black;
                 text-transform: uppercase;
 
-                &.active {                    
+                &.active {
                     font-family: $font-family-secondary;
                     font-weight: 700;    
                 }
 
                 @include breakpoint(large) {
                     &:hover {
-                        color: $neon-yellow;
+                        color: $bright-blue;
                     }
                 }
 

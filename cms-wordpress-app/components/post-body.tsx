@@ -1,4 +1,4 @@
-import styles from './post-body.module.css'
+
 
 export default function PostBody({ content }) {
   return (
@@ -7,9 +7,9 @@ export default function PostBody({ content }) {
         <div className="grid-x">
           <div className="cell">
           <div className="grid-x">
-            <div className="cell small-12">
+            <div className="cell large-6 small-12">
               <div className="wordpress-content" dangerouslySetInnerHTML={{ __html: content }}>
-            </div>
+              </div>
           </div>
         </div>
       </div>

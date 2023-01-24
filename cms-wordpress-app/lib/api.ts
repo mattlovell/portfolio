@@ -126,6 +126,30 @@ export async function getAllPostsForHome2(preview) {
   return data?.posts
 }
 
+export async function getMediaItemsForPost(postID){
+  const data = await fetchAPI(`
+  {
+    mediaItems(where: {parentIn: $postID}) {
+      edges {
+        node {
+          mediaItemUrl
+          parentId
+          title
+        }
+      }
+    }
+  }
+  `,
+  {
+    variables: {
+      onlyEnabled: !postID,
+      postID,
+    },
+  }
+  )
+  return data //?.mediaItems
+}
+
 export async function getPostAndMorePosts(slug, preview, previewData) {
   const postPreview = preview && previewData?.post
   // The slug may be the id of an unpublished post
@@ -146,6 +170,7 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
       }
     }
     fragment PostFields on Post {
+      id
       title
       excerpt
       slug
@@ -204,10 +229,20 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
             : ''
         }
       }
+
       posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
         edges {
           node {
             ...PostFields
+          }
+        }
+      }
+      mediaItems(where: {parent: $id}) {
+        edges {
+          node {
+            mediaItemUrl
+            parentId
+            title
           }
         }
       }

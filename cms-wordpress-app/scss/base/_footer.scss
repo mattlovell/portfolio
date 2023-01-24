@@ -1,6 +1,6 @@
 footer {
     display: block;
-    background-color: $dark-grey;
+    background-color: $dark-petrol;
     margin: 0;
     position: relative;
     color: $white;
@@ -14,24 +14,6 @@ footer {
     @include breakpoint(small only) {
         .grid-container {
             padding: 0;
-        }
-    }
-    h6, p, span, ul, ol, a {
-        font-size: rem-calc(13px);
-        margin: 0;
-        padding: 0;
-        color: $white;
-    }
-
-    .footer-title {
-        margin-bottom: $xsmall-spacing;
-    }
-    
-    a {
-        display: block;
-       
-        &:hover, &:focus {
-            color: $neon-yellow;
         }
     }
 
@@ -50,6 +32,16 @@ footer {
 
         @include breakpoint(large) {
             padding: $xlarge-spacing 0 $medium-spacing 0;
+        }
+
+
+        p,span {
+            font-family: $font-family-secondary;
+            font-size: 1rem;
+            padding-right: 0.5rem;
+        }
+        p {
+            font-weight: bold;
         }
 
         &.alt {

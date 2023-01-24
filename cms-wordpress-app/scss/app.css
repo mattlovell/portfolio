@@ -6030,91 +6030,6 @@ header {
   }
 }
 
-footer {
-  display: block;
-  background-color: #222222;
-  margin: 0;
-  position: relative;
-  color: #fff;
-  text-align: center;
-}
-@media print, screen and (min-width: 48em) {
-  footer {
-    text-align: left;
-  }
-}
-@media print, screen and (max-width: 47.99875em) {
-  footer .grid-container {
-    padding: 0;
-  }
-}
-footer h6, footer p, footer span, footer ul, footer ol, footer a {
-  font-size: 0.8125rem;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-}
-footer .footer-title {
-  margin-bottom: 10px;
-}
-footer a {
-  display: block;
-}
-footer a:hover, footer a:focus {
-  color: #DFFF2F;
-}
-footer a[target=_blank] {
-  display: inline-block;
-}
-footer ul {
-  list-style-type: none;
-}
-footer .cell {
-  padding: 40px;
-}
-@media print, screen and (min-width: 75em) {
-  footer .cell {
-    padding: 160px 0 40px 0;
-  }
-}
-footer .cell.alt {
-  background-color: #333;
-}
-@media print, screen and (min-width: 75em) {
-  footer .cell.alt {
-    background-color: transparent;
-  }
-  footer .cell.alt:before {
-    content: "";
-    background-color: #333;
-    display: block;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-    margin-left: -40px;
-    height: 100%;
-    width: 100%;
-  }
-}
-footer .cell.alt .holder {
-  position: relative;
-  z-index: 1;
-}
-footer .cell.copyright {
-  font-size: 0.6875rem;
-  padding-top: 0;
-  background-color: #333;
-}
-footer .cell.copyright span {
-  color: #969696;
-}
-@media print, screen and (min-width: 75em) {
-  footer .cell.copyright {
-    background-color: transparent;
-    margin-top: 80px;
-  }
-}
-
 body {
   font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
@@ -6415,7 +6330,7 @@ a.underline:after {
   display: block;
   width: 0%;
   height: 1px;
-  background-color: #DFFF2F;
+  background-color: #0F52BA;
   transition: width 0.25s;
 }
 a.underline:hover:after {
@@ -6570,11 +6485,6 @@ nav.navigation ul.primary-navigation {
   top: 0;
   flex-direction: column;
 }
-@media screen and (orientation: landscape) and (max-width: 47.99875em) {
-  nav.navigation ul.primary-navigation {
-    padding: 40px 40px 40px 160px;
-  }
-}
 @media print, screen and (max-width: 74.99875em) {
   nav.navigation ul.primary-navigation {
     transform: translateX(100%);
@@ -6585,7 +6495,7 @@ nav.navigation ul.primary-navigation {
     opacity: 1;
     display: flex;
     transform: translateX(30px);
-    background-color: #DFFF2F;
+    background-color: #0F52BA;
   }
   nav.navigation ul.primary-navigation.active li {
     opacity: 1;
@@ -6648,7 +6558,7 @@ nav.navigation ul.primary-navigation li a.active {
 }
 @media print, screen and (min-width: 75em) {
   nav.navigation ul.primary-navigation li a:hover {
-    color: #DFFF2F;
+    color: #0F52BA;
   }
 }
 nav.navigation .navigation-background {
@@ -6686,6 +6596,84 @@ main {
 }
 main.slideLeft {
   left: -201px;
+}
+
+footer {
+  display: block;
+  background-color: #05242b;
+  margin: 0;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+@media print, screen and (min-width: 48em) {
+  footer {
+    text-align: left;
+  }
+}
+@media print, screen and (max-width: 47.99875em) {
+  footer .grid-container {
+    padding: 0;
+  }
+}
+footer a[target=_blank] {
+  display: inline-block;
+}
+footer ul {
+  list-style-type: none;
+}
+footer .cell {
+  padding: 40px;
+}
+@media print, screen and (min-width: 75em) {
+  footer .cell {
+    padding: 160px 0 40px 0;
+  }
+}
+footer .cell p, footer .cell span {
+  font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+footer .cell p {
+  font-weight: bold;
+}
+footer .cell.alt {
+  background-color: #333;
+}
+@media print, screen and (min-width: 75em) {
+  footer .cell.alt {
+    background-color: transparent;
+  }
+  footer .cell.alt:before {
+    content: "";
+    background-color: #333;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    margin-left: -40px;
+    height: 100%;
+    width: 100%;
+  }
+}
+footer .cell.alt .holder {
+  position: relative;
+  z-index: 1;
+}
+footer .cell.copyright {
+  font-size: 0.6875rem;
+  padding-top: 0;
+  background-color: #333;
+}
+footer .cell.copyright span {
+  color: #969696;
+}
+@media print, screen and (min-width: 75em) {
+  footer .cell.copyright {
+    background-color: transparent;
+    margin-top: 80px;
+  }
 }
 
 @media print, screen and (min-width: 75em) {
@@ -6814,358 +6802,6 @@ main.slideLeft {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.home-hero-module .captions {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-.home-hero-module .captions h2 {
-  color: var(--hero-title);
-  font-weight: bold;
-}
-.home-hero-module .captions h3 {
-  color: var(--hero-subtitle);
-  line-height: 1;
-}
-.home-hero-module .captions .textarea--white {
-  border-radius: 1rem;
-  padding: 2rem;
-  -webkit-backdrop-filter: blur(15px) brightness(115%);
-          backdrop-filter: blur(15px) brightness(115%);
-  background: rgba(255, 255, 255, 0.25);
-}
-.home-hero-module .captions .textarea--white h2 a {
-  color: white;
-}
-.home-hero-module .captions .textarea--white div p {
-  color: white;
-  font-size: 1.5rem;
-}
-.home-hero-module .captions .textarea--transparent {
-  border-radius: 1rem;
-  padding: 2rem;
-  -webkit-backdrop-filter: blur(15px) brightness(115%);
-          backdrop-filter: blur(15px) brightness(115%);
-}
-.home-hero-module .captions .textarea--transparent div p {
-  font-size: 1.5rem;
-}
-
-.journalContentPage main:before {
-  content: "";
-  background-color: #F9F9F9;
-  width: 40%;
-  height: 100vh;
-  display: inline-block;
-  position: fixed;
-  left: 0;
-  top: 100px;
-  z-index: -1;
-}
-
-@media print, screen and (min-width: 75em) {
-  .journalsLandingPage .journal-featured .grid-padding-x {
-    margin: 0;
-  }
-}
-
-.journal .journal-headings {
-  padding: 80px;
-}
-.journal .textbox {
-  padding: 80px;
-}
-.journal .pullright {
-  right: -0.9375rem;
-  position: relative;
-}
-
-@media print, screen and (max-width: 74.99875em) {
-  .journal-featured .grid-container {
-    padding: 0;
-  }
-}
-.journal-featured .journal-featured-title {
-  font-size: 2.5rem;
-  line-height: 1;
-}
-.journal-featured .journal-featured-subtitle {
-  font-size: 2.5rem;
-  line-height: 1;
-  color: #969696;
-}
-.journal-featured p {
-  color: #969696;
-}
-@media print, screen and (min-width: 75em) {
-  .journal-featured .journal-image-holder {
-    position: relative;
-    margin-top: 40px;
-    width: auto;
-  }
-  .journal-featured .journal-image-holder img {
-    position: relative;
-    width: 65vw;
-    display: block;
-    max-width: initial;
-    left: -80px;
-  }
-}
-
-.journal-listing {
-  background-color: #F9F9F9;
-  margin: 40px 0 0 0;
-  padding: 40px 0;
-}
-@media print, screen and (min-width: 75em) {
-  .journal-listing {
-    margin: 80px 0 0 0;
-    padding: 80px 0;
-  }
-}
-body.homeLandingPage .journal-listing {
-  min-height: 100%;
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-body.homeLandingPage .journal-listing .breadcrumbs {
-  display: none;
-}
-@media print, screen and (min-width: 75em) {
-  body.homeLandingPage .journal-listing {
-    height: 100vh;
-    padding: 160px 0;
-  }
-}
-.journal-listing .journal-breadcrumb {
-  font-size: 0.875rem;
-  line-height: 1rem;
-}
-.journal-listing .journal-title {
-  font-size: 2.5rem;
-  line-height: 1;
-  margin-top: 20px;
-}
-.journal-listing .journal-subtitle {
-  font-size: 2.5rem;
-  line-height: 1;
-  color: #969696;
-  margin-top: 20px;
-}
-
-@media print, screen and (max-width: 74.99875em) {
-  .journalContentPage .journal-main-content .text-module {
-    padding: 0;
-  }
-  .journalContentPage .journal-main-content .text-module .column, .journalContentPage .journal-main-content .text-module .columns {
-    padding: 0;
-  }
-  .journalContentPage .journal-main-content .text-module .grid-container {
-    padding: 0;
-  }
-}
-@media print, screen and (max-width: 74.99875em) {
-  .journalContentPage .journal-main-content .media-text {
-    padding: 0;
-  }
-  .journalContentPage .journal-main-content .media-text .column, .journalContentPage .journal-main-content .media-text .columns {
-    padding: 0;
-  }
-  .journalContentPage .journal-main-content .media-text .grid-container {
-    padding: 0;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .journalContentPage .journal-main-content .media-text {
-    position: relative;
-    left: -160px;
-    width: 54vw;
-    padding: 0 0 160px 0;
-  }
-  .journalContentPage .journal-main-content .media-text .column, .journalContentPage .journal-main-content .media-text .columns {
-    padding: 0;
-  }
-  .journalContentPage .journal-main-content .media-text .column ~ .column, .journalContentPage .journal-main-content .media-text .columns ~ .column, .journalContentPage .journal-main-content .media-text .column ~ .columns, .journalContentPage .journal-main-content .media-text .columns ~ .columns {
-    transform: translateX(30px);
-  }
-  .journalContentPage .journal-main-content .media-text .grid-container {
-    padding: 0;
-  }
-  .journalContentPage .journal-main-content .media-text .media-module {
-    position: initial;
-    left: initial;
-    width: initial;
-    padding: initial;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .journalContentPage .journal-main-content .media-module {
-    position: relative;
-    left: -160px;
-    width: 56vw;
-    padding: 0 0 160px 0;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .journalContentPage .journal-main-content .text-module {
-    padding: 40px 0;
-  }
-}
-
-.case-studies.landing {
-  position: relative;
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing {
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    transition: all ease 1s;
-  }
-}
-.case-studies.landing .listing {
-  display: block;
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-}
-@media print, screen and (max-width: 74.99875em) {
-  .case-studies.landing .listing .case-studies-panel {
-    position: relative;
-  }
-}
-.case-studies.landing .listing .case-studies-panel img {
-  display: block;
-  width: 100%;
-  transition: opacity linear 0.5s;
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing .case-studies-panel img {
-    opacity: 0;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-  }
-}
-.case-studies.landing .listing .case-studies-panel img:first-of-type {
-  opacity: 1;
-}
-.case-studies.landing .listing .case-studies-panel .case-study-titles-holder {
-  position: absolute;
-  padding: 20px;
-  transform: translateY(-120px);
-  z-index: 2;
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing .case-studies-panel .case-study-titles-holder {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    padding: 0;
-    transform: initial;
-  }
-  .case-studies.landing .listing .case-studies-panel .case-study-titles-holder:last-of-type > .case-study-title:after {
-    content: "";
-  }
-}
-.case-studies.landing .listing .case-studies-listingpage-title {
-  display: none;
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing .case-studies-listingpage-title {
-    display: block;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    font-size: 1.25rem;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing .case-study-title {
-    font-size: 3.625rem;
-    opacity: 0.5;
-    margin-bottom: 20px;
-  }
-  .case-studies.landing .listing .case-study-title:after {
-    content: " / ";
-  }
-  .case-studies.landing .listing .case-study-title:hover {
-    opacity: 1;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing .case-study-subtitle {
-    display: none;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.landing .listing .case-study-category {
-    display: none;
-  }
-}
-.case-studies.contentpage .hero-content .breadcrumbs {
-  display: none;
-}
-.case-studies.contentpage .hero-content h2 {
-  display: none;
-}
-@media print, screen and (min-width: 75em) {
-  .case-studies.contentpage .grid-container.full {
-    padding-left: initial;
-    padding-right: initial;
-    max-width: initial;
-    margin-left: initial;
-    margin-right: initial;
-  }
-}
-
-.introduction {
-  background-color: var(--intro-bc);
-}
-@media print, screen and (max-width: 74.99875em) {
-  .introduction .grid-container .grid-x .column, .introduction .grid-container .grid-x .columns {
-    padding: 0;
-  }
-}
-.introduction .introduction-title, .introduction .introduction-text {
-  color: var(--intro-title);
-}
-.introduction .introduction-subtitle {
-  color: var(--intro-subtitle);
-}
-.introduction .deliverables {
-  -moz-column-count: 2;
-       column-count: 2;
-  width: 100%;
-  margin-bottom: 40px;
-}
-@media print, screen and (min-width: 75em) {
-  .introduction .deliverables {
-    transform: translateY(-80px);
-    margin-bottom: -40px;
-    margin-left: 40px;
-    margin-bottom: 0;
-  }
-}
-.introduction .deliverables .deliverables-title {
-  font-weight: 400;
-}
-.introduction .deliverables span {
-  display: block;
-}
 
 .landscape {
   position: relative;
@@ -7212,92 +6848,7 @@ body.homeLandingPage .journal-listing .breadcrumbs {
   color: #000;
 }
 .landscape .captions {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-
-.media-text {
-  background-color: var(--mediatext-bc);
-}
-@media print, screen and (min-width: 75em) {
-  .media-text {
-    position: relative;
-  }
-}
-@media print, screen and (max-width: 74.99875em) {
-  .media-text .grid-container {
-    padding: 0;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .media-text .grid-container .grid-x .column, .media-text .grid-container .grid-x .columns {
-    padding-left: 0;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  .media-text .grid-container .grid-x .column .text-module .grid-container, .media-text .grid-container .grid-x .columns .text-module .grid-container {
-    padding-left: 0;
-  }
-}
-
-.full-bleed-cta {
-  height: 100vh;
-  background-color: #DFFF2F;
-  width: 100%;
-  overflow: hidden;
-}
-@media print, screen and (min-width: 75em) {
-  .full-bleed-cta {
-    display: flex;
-  }
-  .full-bleed-cta .row .column, .full-bleed-cta .row .columns {
-    padding: 0;
-  }
-}
-@media print, screen and (max-width: 47.99875em) {
-  .full-bleed-cta .grid-container {
-    padding: 0;
-  }
-}
-.full-bleed-cta .panel-left {
-  height: 100vh;
-}
-.full-bleed-cta .panel-right {
-  height: 100vh;
-  background-color: #222222;
-}
-@media print, screen and (min-width: 75em) {
-  .full-bleed-cta .panel-right {
-    width: 50vw;
-  }
-}
-.full-bleed-cta .panel-right video {
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.cta-textmodule {
-  align-self: center;
-}
-@media print, screen and (min-width: 75em) {
-  .cta-textmodule .grid-container {
-    padding: 0;
-  }
-}
-.cta-textmodule .cell {
-  display: flex;
-  align-items: center;
-  height: 100vh;
-}
-.cta-textmodule .cell .cta-text .cta-title {
-  color: var(--cta-title);
-}
-.cta-textmodule .cell .cta-text .cta-subtitle {
-  color: var(--cta-subtitle);
+  top: 30%;
 }
 
 .text-hero {
@@ -7462,7 +7013,12 @@ body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.
 }
 
 .post-body {
-  margin: 4rem 0;
+  margin-top: 80px;
+}
+@media print, screen and (min-width: 75em) {
+  .post-body {
+    maring-top: 100px;
+  }
 }
 .post-body .wordpress-content p {
   font-size: 2.25rem;
@@ -7505,20 +7061,30 @@ body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.
   transform-origin: 0 100%;
   transform: scaleX(1);
 }
-.post-body .wordpress-content figure.wp-block-embed__wrapper {
-  width: 100%;
-  height: auto;
+.post-body .wordpress-content blockquote {
+  border: 1px solid black;
+  padding: 2rem;
 }
-.post-body .wordpress-content figure.wp-block-image {
-  float: left;
-  padding-right: 2rem;
-  margin-bottom: 2rem;
+.post-body .wordpress-content blockquote p {
+  font-size: 1.25rem;
+  color: black;
 }
-.post-body .wordpress-content figure.wp-block-image.alignfull.size-full {
-  margin-bottom: 2rem;
+.post-body .wordpress-content div.wp-block-embed__wrapper {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
 }
-.post-body .wordpress-content figure.wp-block-embed.is-type-video iframe {
-  width: 100%;
+@media print, screen and (min-width: 75em) {
+  .post-body .wordpress-content div.wp-block-embed__wrapper {
+    top: 50px;
+  }
+}
+.post-body .wordpress-content div.wp-block-embed__wrapper iframe {
+  width: 100vw;
+  height: 100vh;
 }
 
 .single .captions h1 {
@@ -7532,4 +7098,46 @@ body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.
 }
 .single .captions .title--transparent {
   color: black;
+}
+
+.captions {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.captions h2 {
+  color: var(--hero-title);
+  font-weight: bold;
+}
+.captions h3 {
+  color: var(--hero-subtitle);
+  line-height: 1;
+}
+.captions .textarea--white {
+  border-radius: 1rem;
+  padding: 2rem;
+  -webkit-backdrop-filter: blur(15px) brightness(115%);
+          backdrop-filter: blur(15px) brightness(115%);
+  background: rgba(255, 255, 255, 0.25);
+}
+.captions .textarea--white h1 {
+  color: white;
+}
+.captions .textarea--white h2 a {
+  color: white;
+}
+.captions .textarea--white div p {
+  color: white;
+  font-size: 1.5rem;
+}
+.captions .textarea--transparent {
+  border-radius: 1rem;
+  padding: 2rem;
+  -webkit-backdrop-filter: blur(15px) brightness(115%);
+          backdrop-filter: blur(15px) brightness(115%);
+}
+.captions .textarea--transparent div p {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=app.css.map */
