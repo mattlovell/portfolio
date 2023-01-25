@@ -7031,7 +7031,6 @@ footer .cell.copyright span {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 .single .blur--transparent:after {
   content: "";
@@ -7046,7 +7045,6 @@ footer .cell.copyright span {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 .single .captions {
   position: relative;
@@ -7067,8 +7065,12 @@ footer .cell.copyright span {
 .single .captions .textarea--transparent {
   color: black;
 }
-.single .captions .textarea--transparent a {
-  max-width: 20%;
+.single .captions .textarea--transparent p > a {
+  color: black;
+  text-decoration: underline;
+}
+.single .captions .textarea--transparent .wordpress-content > a {
+  order: 3;
   z-index: 1;
   color: #000;
   height: 48px;
@@ -7087,7 +7089,7 @@ footer .cell.copyright span {
   position: relative;
   transition: color 400ms;
 }
-.single .captions .textarea--transparent a:before {
+.single .captions .textarea--transparent .wordpress-content > a:before {
   content: "";
   height: 100%;
   width: 100%;
@@ -7100,17 +7102,22 @@ footer .cell.copyright span {
   transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
   transform: scaleX(0);
 }
-.single .captions .textarea--transparent a:hover {
+.single .captions .textarea--transparent .wordpress-content > a:hover {
   color: #fff;
 }
-.single .captions .textarea--transparent a:hover:before {
+.single .captions .textarea--transparent .wordpress-content > a:hover:before {
   transform-origin: 0 100%;
   transform: scaleX(1);
 }
 .single .captions .textarea--white {
   color: white;
 }
-.single .captions .textarea--white a {
+.single .captions .textarea--white p > a {
+  color: white;
+  text-decoration: underline;
+}
+.single .captions .textarea--white .wordpress-content > a {
+  order: 3;
   z-index: 1;
   color: #fff;
   height: 48px;
@@ -7129,7 +7136,7 @@ footer .cell.copyright span {
   position: relative;
   transition: color 400ms;
 }
-.single .captions .textarea--white a:before {
+.single .captions .textarea--white .wordpress-content > a:before {
   content: "";
   height: 100%;
   width: 100%;
@@ -7142,10 +7149,10 @@ footer .cell.copyright span {
   transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
   transform: scaleX(0);
 }
-.single .captions .textarea--white a:hover {
+.single .captions .textarea--white .wordpress-content > a:hover {
   color: #fff;
 }
-.single .captions .textarea--white a:hover:before {
+.single .captions .textarea--white .wordpress-content > a:hover:before {
   transform-origin: 0 100%;
   transform: scaleX(1);
 }
@@ -7161,7 +7168,6 @@ footer .cell.copyright span {
 .single .captions .wordpress-content a {
   flex-wrap: wrap;
   flex: 1 100%;
-  order: 1;
   width: 100%;
 }
 @media print, screen and (min-width: 75em) {

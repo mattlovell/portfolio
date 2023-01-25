@@ -14,6 +14,7 @@ export default function MoreStories({ posts }) {
             coverImage={node.featuredImage}
             date={node.date}
             slug={node.slug}
+            customStyling={node.customStyling}
             excerpt={node.excerpt}
           />
         ))}

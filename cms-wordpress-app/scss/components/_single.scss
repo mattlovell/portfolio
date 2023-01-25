@@ -51,17 +51,28 @@
 
         .textarea--transparent {
             color: black;
-            a {
-                max-width: 20%;
-                @include block-button($black, $white, $bright-blue);
-            }
+
+
+            p > a {
+                color: black;
+                text-decoration: underline;
+                }
+                .wordpress-content > a {
+                    order:3;
+                    @include block-button($black, $white, $bright-blue);
+                }
         }
         .textarea--white {
             color: white;
 
-            a {
-                @include block-button($white, $white, $bright-blue);
-            }
+            p > a {
+                    color: white; 
+                    text-decoration: underline;
+                }
+                .wordpress-content > a {
+                    order:3;
+                    @include block-button($white, $white, $bright-blue);
+                }
         }
         .wordpress-content {
 
@@ -76,7 +87,7 @@
             a {
                 flex-wrap: wrap;
                 flex: 1 100%;
-                order:1;
+
                 width: 100%;
 
                 @include breakpoint(large) {
@@ -152,6 +163,7 @@
                 }
             }
         }
+
         img {
             border-radius: 1rem;
         }

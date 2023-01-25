@@ -33,13 +33,13 @@
     animation: fadeInPartial ease $xslow-speed;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    -webkit-transform:translate3d(0,0,0);
+
 }
 @mixin fade-in-partialLighten(){
     animation: fadeInPartialLighten ease $xslow-speed;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    -webkit-transform:translate3d(0,0,0);
+
 }
 @mixin fade-in-animation(){
     animation: fadeInAnimation ease $slow-speed;

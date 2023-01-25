@@ -27,9 +27,9 @@ export default function Navigation() {
                           </button>
                         </div>
                         <ul className="primary-navigation vertical medium-horizontal menu ">
-                          <li><a title="Get in touch" href="">Contact</a></li>
+                          <li><a title="Get in touch" href="mailto:me@mjlovell.com">Contact</a></li>
                         </ul>
-                        <div className="navigation-background dsk"></div>
+
                     </nav>
                 </div>
             </div>
