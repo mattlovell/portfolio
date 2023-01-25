@@ -2,11 +2,7 @@
     position: relative;
 
     .blur {
-        img {
-            object-fit: cover;
-            width: 100vw;
-            height: 100vh;
-        }
+
         &--white{
             &:after{
                 content: "";
@@ -87,7 +83,6 @@
             a {
                 flex-wrap: wrap;
                 flex: 1 100%;
-
                 width: 100%;
 
                 @include breakpoint(large) {
@@ -101,9 +96,12 @@
                 flex: 1 100%;
 
                 order:1;
-                font-size: 1.75rem;
+                font-size: 1.25rem;
                 width: 100%;
 
+                a {
+                    font-size: 75%;
+                }
                 @include breakpoint(large) {
                     flex: 1 55%;
                     font-size: 2.25rem;
@@ -115,11 +113,6 @@
             figure {
                 order:0;
                 flex: 1 50%;
-                // padding: 0;
-                // @include breakpoint(large) {
-                //     padding: 2px;
-                // }
-
                 &.wp-block-embed  {
                     order: 2;
                     border: none;
@@ -128,10 +121,10 @@
                         width: 100%;
                         height: 100%;
                         iframe {
-                            // width: 100%;
-                            // height: 100%;
-                            // min-width: 100%;
-                            // min-height: 100%;
+                            width: 100%;
+                            height: 100%;
+                            min-width: 300px;
+                            min-height: 100%;
                             @include breakpoint(large){
 
                             min-width: 660px;
@@ -144,6 +137,8 @@
                 }
 
                 &.wp-block-image {
+                    border-right: 10px transparent solid;
+                    margin-bottom: 10px;
                     @include breakpoint(medium){
                         border-right: 10px transparent solid;
                         margin-bottom: 10px;
@@ -171,11 +166,17 @@
 
 
         h1 {
-            font-size: 8rem;
+            font-size: 4rem;
+            @include breakpoint(large) {
+                font-size: 8rem;
+            }
         }
         span {
-            font-size: 4rem;
+            font-size: 2rem;
             font-weight: bold;
+            @include breakpoint(large) {
+                font-size: 4rem;
+            }
         }
 
         .title {
