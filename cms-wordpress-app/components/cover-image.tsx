@@ -9,10 +9,11 @@ interface Props {
       sourceUrl: string
     }
   }
+  blur?:string
   slug?: string
 }
 
-export default function CoverImage({ title, coverImage, slug }: Props) {
+export default function CoverImage({ title, coverImage, blur, slug }: Props) {
   const image = (
     <Image
       width={2000}
@@ -26,7 +27,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
     />
   )
   return (
-    <div className="blur">
+    <div className={`blur blur--${blur}`}>
       {slug ? (
         <Link href={`/posts/${slug}`} aria-label={title}>
           {image}

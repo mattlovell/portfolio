@@ -1,8 +1,8 @@
 import { AppProps } from 'next/app'
 import '../scss/app.css'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function Portfolio({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default Portfolio

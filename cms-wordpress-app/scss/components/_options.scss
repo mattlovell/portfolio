@@ -50,8 +50,13 @@
     
 }
 
-.pinned {
+
+.sticky {
     position: sticky;
+    top: 0;
+}
+.pinned {
+    position: fixed;
     top: 0;
 }
 

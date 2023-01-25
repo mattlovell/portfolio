@@ -8,8 +8,46 @@
 }
 
 
-@mixin block-button($colour, $hoverColour, $background) {
+@keyframes fadeInPartialLighten {
+    0% {
 
+        backdrop-filter: blur(15px) brightness(100%);
+    }
+    100% {
+
+        backdrop-filter: blur(15px) brightness(200%);
+     }
+}
+@keyframes fadeInPartial {
+    0% {
+
+        backdrop-filter: blur(15px) brightness(100%);
+    }
+    100% {
+
+        backdrop-filter: blur(15px) brightness(60%);
+     }
+}
+
+@mixin fade-in-partial(){
+    animation: fadeInPartial ease $xslow-speed;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-transform:translate3d(0,0,0);
+}
+@mixin fade-in-partialLighten(){
+    animation: fadeInPartialLighten ease $xslow-speed;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-transform:translate3d(0,0,0);
+}
+@mixin fade-in-animation(){
+    animation: fadeInAnimation ease $slow-speed;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@mixin block-button($colour, $hoverColour, $background) {
+    z-index: 1;
     color: $colour;
     height: 48px;
     padding: 0 24px;

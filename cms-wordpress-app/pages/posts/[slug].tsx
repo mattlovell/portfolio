@@ -3,8 +3,8 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import ContainerSingle from '../../components/container-single'
-import PostBody from '../../components/post-body'
-import MoreStories from '../../components/more-stories'
+// import PostBody from '../../components/post-body'
+// import MoreStories from '../../components/more-stories'
 // import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
@@ -15,11 +15,12 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 
 
 export default function Post({ post, posts, media,preview }) {
+
+  
   const router = useRouter()
-  const morePosts = posts?.edges
+ // const morePosts = posts?.edges
   const images = media
 
-  console.log(images)
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -55,16 +56,18 @@ export default function Post({ post, posts, media,preview }) {
                 date={post.date}
                 categories={post.categories}
                 customStyling={post.customStyling}
+                content={post.content}
               />
               <MediaItems id={post.id}/>
-              <PostBody content={post.content} />
-              <footer>
-                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-              </footer>
+              {/* <PostBody content={post.content} /> */}
+
             </article>
 
             {/* <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+            <footer>
+                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
+            </footer>
           </>
         )}
       </ContainerSingle>

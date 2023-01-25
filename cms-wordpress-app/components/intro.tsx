@@ -4,7 +4,7 @@ import scrollImg from '../public/logos/scrolldown.png';
 export default function Intro() {
   return (
     <div className='home-hero-module intro'>
-    <div className="grid-container full hero full-background pinned">
+    <div className="grid-container full hero full-background sticky">
 
     <div className="grid-x ">
         <div className="cell large-12 ">

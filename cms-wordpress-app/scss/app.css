@@ -6011,6 +6011,47 @@ body.servicesLandingPage main, body.errorContentPage main, body.defaultContentPa
   z-index: 1;
 }
 
+@-webkit-keyframes fadeInPartialLighten {
+  0% {
+    -webkit-backdrop-filter: blur(15px) brightness(100%);
+            backdrop-filter: blur(15px) brightness(100%);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(15px) brightness(200%);
+            backdrop-filter: blur(15px) brightness(200%);
+  }
+}
+
+@keyframes fadeInPartialLighten {
+  0% {
+    -webkit-backdrop-filter: blur(15px) brightness(100%);
+            backdrop-filter: blur(15px) brightness(100%);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(15px) brightness(200%);
+            backdrop-filter: blur(15px) brightness(200%);
+  }
+}
+@-webkit-keyframes fadeInPartial {
+  0% {
+    -webkit-backdrop-filter: blur(15px) brightness(100%);
+            backdrop-filter: blur(15px) brightness(100%);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(15px) brightness(60%);
+            backdrop-filter: blur(15px) brightness(60%);
+  }
+}
+@keyframes fadeInPartial {
+  0% {
+    -webkit-backdrop-filter: blur(15px) brightness(100%);
+            backdrop-filter: blur(15px) brightness(100%);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(15px) brightness(60%);
+            backdrop-filter: blur(15px) brightness(60%);
+  }
+}
 main {
   height: 100%;
   flex-grow: 2;
@@ -6197,6 +6238,7 @@ blockquote {
 }
 
 .block-btn {
+  z-index: 1;
   color: #000;
   height: 48px;
   padding: 0 24px;
@@ -6236,6 +6278,7 @@ blockquote {
 }
 
 .block-btn-cta {
+  z-index: 1;
   color: #000;
   height: 48px;
   padding: 0 24px;
@@ -6275,6 +6318,7 @@ blockquote {
 }
 
 .textarea--white .block-btn-cta {
+  z-index: 1;
   color: #fff;
   height: 48px;
   padding: 0 24px;
@@ -6315,7 +6359,6 @@ blockquote {
 
 a {
   color: #222222;
-  transition: color ease 1s;
   outline: none;
 }
 a:hover, a:focus {
@@ -6353,13 +6396,31 @@ a.underline:hover:after {
 }
 
 body {
-  transition: opacity ease 1s;
-  opacity: 0;
-}
-body.loaded {
-  opacity: 1;
+  -webkit-animation: fadeInAnimation ease 2s;
+          animation: fadeInAnimation ease 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 video {
   transition: all ease 2s;
 }
@@ -6431,6 +6492,7 @@ nav.navigation {
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease;
+  z-index: 99;
 }
 nav.navigation.open {
   justify-content: flex-start;
@@ -6447,6 +6509,7 @@ nav.navigation a.homepage-link {
   z-index: 100;
 }
 nav.navigation .mobile-nav-trigger {
+  display: none;
   z-index: 199;
   background-color: #fff;
   border-left: 1px #ccc solid;
@@ -6472,76 +6535,23 @@ nav.navigation .mobile-nav-trigger.open {
   }
 }
 nav.navigation ul.primary-navigation {
-  opacity: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  right: initial;
+  justify-content: flex-end;
+  opacity: 1;
+  height: initial;
+  max-width: initial;
+  padding: initial;
+  flex-direction: row;
   list-style-type: none;
-  z-index: 99;
-  transition: transform, opacity 0.5s ease;
-  width: 100%;
-  height: 100vh;
-  padding: 40px;
-  justify-content: center;
-  align-items: flex-start;
-  position: absolute;
-  top: 0;
-  flex-direction: column;
-}
-@media print, screen and (max-width: 74.99875em) {
-  nav.navigation ul.primary-navigation {
-    transform: translateX(100%);
-  }
-}
-@media print, screen and (max-width: 74.99875em) {
-  nav.navigation ul.primary-navigation.active {
-    opacity: 1;
-    display: flex;
-    transform: translateX(30px);
-    background-color: #0F52BA;
-  }
-  nav.navigation ul.primary-navigation.active li {
-    opacity: 1;
-    float: none;
-    margin-bottom: 24px;
-  }
-  nav.navigation ul.primary-navigation.active li a {
-    font-family: "aktiv-grotesk-thin", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    color: #222222;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-  }
-}
-@media print, screen and (min-width: 75em) {
-  nav.navigation ul.primary-navigation {
-    margin: 0;
-    position: relative;
-    display: flex;
-    right: initial;
-    justify-content: flex-end;
-    opacity: 1;
-    height: initial;
-    max-width: initial;
-    padding: initial;
-    flex-direction: row;
-  }
 }
 nav.navigation ul.primary-navigation li {
   padding: 0px;
-  float: left;
-  opacity: 0;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.5em;
-}
-@media print, screen and (min-width: 75em) {
-  nav.navigation ul.primary-navigation li {
-    margin-right: 20px;
-    opacity: 1;
-    font-size: 0.8125rem;
-  }
-}
-@media screen and (min-width: 90em) {
-  nav.navigation ul.primary-navigation li {
-    margin-right: 80px;
-  }
 }
 nav.navigation ul.primary-navigation li:last-child {
   margin-right: 0;
@@ -6551,6 +6561,8 @@ nav.navigation ul.primary-navigation li a {
   margin: 0;
   color: #000;
   text-transform: uppercase;
+  position: relative;
+  z-index: 101;
 }
 nav.navigation ul.primary-navigation li a.active {
   font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
@@ -6564,14 +6576,14 @@ nav.navigation ul.primary-navigation li a.active {
 nav.navigation .navigation-background {
   display: none;
 }
-nav.navigation .navigation-background.dsk {
-  display: block;
+nav.navigation:after {
   position: absolute;
-  z-index: 98;
+  content: "";
+  top: 0;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(20px) brightness(300%);
-          backdrop-filter: blur(20px) brightness(300%);
+  -webkit-backdrop-filter: blur(20px) brightness(200%);
+          backdrop-filter: blur(20px) brightness(200%);
   left: 0;
   right: 0;
 }
@@ -6581,7 +6593,6 @@ nav.navigation .navigation-background.dsk {
 }
 
 header {
-  transition: background-color, width ease 0.25s;
   left: 0;
   background-color: transparent;
 }
@@ -6590,12 +6601,8 @@ header.open {
 }
 
 main {
-  transition: all ease 0.5s;
   left: 0;
   position: relative;
-}
-main.slideLeft {
-  left: -201px;
 }
 
 footer {
@@ -6714,9 +6721,14 @@ footer .cell.copyright span {
     padding-bottom: 80px;
   }
 }
-.pinned {
+.sticky {
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
+}
+
+.pinned {
+  position: fixed;
   top: 0;
 }
 
@@ -6851,97 +6863,6 @@ footer .cell.copyright span {
   top: 30%;
 }
 
-.text-hero {
-  background-color: var(--texthero-bc);
-}
-.text-hero h2 {
-  color: var(--texthero-titleColor);
-  line-height: 1;
-  font-weight: 600;
-}
-.text-hero h3 {
-  color: var(--texthero-subtitleColor);
-  line-height: 1;
-  font-weight: 200;
-}
-@media print, screen and (min-width: 75em) {
-  .text-hero h3 {
-    font-size: 4rem;
-    width: 60%;
-  }
-}
-body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.defaultContentPage .text-hero, body.errorContentPage .text-hero, body.studioLandingPage .text-hero,
-.text-hero body.servicesLandingPage {
-  padding-top: 80px;
-  padding-bottom: 40px;
-}
-@media print, screen and (min-width: 75em) {
-  body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.defaultContentPage .text-hero, body.errorContentPage .text-hero, body.studioLandingPage .text-hero,
-.text-hero body.servicesLandingPage {
-    padding-top: 160px;
-    padding-bottom: 80px;
-  }
-}
-
-.text-module h2 {
-  color: var(--textmod-titleColor);
-}
-@media print, screen and (min-width: 75em) {
-  .text-module h2 {
-    font-size: 3.5rem;
-  }
-}
-.text-module h3 {
-  color: var(--textmod-subtitleColor);
-}
-@media print, screen and (min-width: 75em) {
-  .text-module h3 {
-    width: 60%;
-  }
-}
-
-.fullwidth-breakout {
-  position: relative;
-  display: flex;
-  height: 100vh;
-}
-@media print, screen and (min-width: 75em) {
-  .fullwidth-breakout .media-module {
-    position: absolute;
-  }
-}
-.fullwidth-breakout .blockquote-holder {
-  position: relative;
-  width: 100%;
-  display: flex;
-  height: 100vh;
-}
-.fullwidth-breakout .blockquote-holder .cell {
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-}
-.fullwidth-breakout .blockquote-holder .blockquote-panel {
-  align-self: center;
-  justify-content: end;
-  width: 50%;
-  margin-left: 50%;
-}
-.fullwidth-breakout .blockquote-holder .blockquote-panel.full {
-  width: 100%;
-  margin-left: 0;
-}
-.fullwidth-breakout .blockquote-holder .blockquote-panel.left {
-  margin-left: 0;
-  margin-right: 0;
-}
-.fullwidth-breakout .blockquote-holder .blockquote-panel span {
-  font-size: 0.875rem;
-}
-.fullwidth-breakout .blockquote-holder .blockquote-panel blockquote {
-  color: var(--bq-colour);
-}
-
 .errorContentPage main {
   padding-top: 80px;
   background-color: #DFFF2F;
@@ -7017,13 +6938,14 @@ body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.
 }
 @media print, screen and (min-width: 75em) {
   .post-body {
-    maring-top: 100px;
+    margin-top: 100px;
   }
 }
 .post-body .wordpress-content p {
   font-size: 2.25rem;
 }
 .post-body .wordpress-content p a {
+  z-index: 1;
   color: #000;
   height: 48px;
   padding: 0 24px;
@@ -7087,11 +7009,225 @@ body.contactUsContentPage .text-hero, body.journalsLandingPage .text-hero, body.
   height: 100vh;
 }
 
+.single {
+  position: relative;
+}
+.single .blur img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.single .blur--white:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: fadeInPartial ease 3s;
+          animation: fadeInPartial ease 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.single .blur--transparent:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: fadeInPartialLighten ease 3s;
+          animation: fadeInPartialLighten ease 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.single .captions {
+  position: relative;
+  top: 120px;
+  transform: none;
+}
+@media print, screen and (min-width: 75em) {
+  .single .captions {
+    top: 160px;
+  }
+}
+.single .captions .textarea--transparent, .single .captions .textarea--white {
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  background: none;
+  padding: 0rem;
+}
+.single .captions .textarea--transparent {
+  color: black;
+}
+.single .captions .textarea--transparent a {
+  max-width: 20%;
+  z-index: 1;
+  color: #000;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  line-height: 48px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 40px 0 0 0;
+  position: relative;
+  transition: color 400ms;
+}
+.single .captions .textarea--transparent a:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #0F52BA;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: 100% 100%;
+  transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
+  transform: scaleX(0);
+}
+.single .captions .textarea--transparent a:hover {
+  color: #fff;
+}
+.single .captions .textarea--transparent a:hover:before {
+  transform-origin: 0 100%;
+  transform: scaleX(1);
+}
+.single .captions .textarea--white {
+  color: white;
+}
+.single .captions .textarea--white a {
+  z-index: 1;
+  color: #fff;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  line-height: 48px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 40px 0 0 0;
+  position: relative;
+  transition: color 400ms;
+}
+.single .captions .textarea--white a:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #0F52BA;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform-origin: 100% 100%;
+  transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
+  transform: scaleX(0);
+}
+.single .captions .textarea--white a:hover {
+  color: #fff;
+}
+.single .captions .textarea--white a:hover:before {
+  transform-origin: 0 100%;
+  transform: scaleX(1);
+}
+.single .captions .wordpress-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.single .captions .wordpress-content .taxonomy-post_tag {
+  display: none;
+}
+.single .captions .wordpress-content a {
+  flex-wrap: wrap;
+  flex: 1 100%;
+  order: 1;
+  width: 100%;
+}
+@media print, screen and (min-width: 75em) {
+  .single .captions .wordpress-content a {
+    flex: 1 55%;
+    max-width: 55%;
+  }
+}
+.single .captions .wordpress-content p {
+  flex-wrap: wrap;
+  flex: 1 100%;
+  order: 1;
+  font-size: 1.75rem;
+  width: 100%;
+}
+@media print, screen and (min-width: 75em) {
+  .single .captions .wordpress-content p {
+    flex: 1 55%;
+    font-size: 2.25rem;
+    max-width: 55%;
+  }
+}
+.single .captions .wordpress-content figure {
+  order: 0;
+  flex: 1 50%;
+}
+.single .captions .wordpress-content figure.wp-block-embed {
+  order: 2;
+  border: none;
+  max-width: 100%;
+}
+.single .captions .wordpress-content figure.wp-block-embed div.wp-block-embed__wrapper {
+  width: 100%;
+  height: 100%;
+}
+@media print, screen and (min-width: 75em) {
+  .single .captions .wordpress-content figure.wp-block-embed div.wp-block-embed__wrapper iframe {
+    min-width: 660px;
+    min-height: 440px;
+    width: 75vw;
+    height: 60vh;
+  }
+}
+@media print, screen and (min-width: 48em) {
+  .single .captions .wordpress-content figure.wp-block-image {
+    border-right: 10px transparent solid;
+    margin-bottom: 10px;
+  }
+}
+.single .captions .wordpress-content blockquote {
+  border: 1px solid black;
+  padding: 2rem;
+}
+.single .captions .wordpress-content blockquote p {
+  font-size: 1.25rem;
+  color: black;
+}
+.single .captions img {
+  border-radius: 1rem;
+}
 .single .captions h1 {
-  font-size: 4rem;
+  font-size: 8rem;
 }
 .single .captions span {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
 }
 .single .captions .title--white {
   color: white;

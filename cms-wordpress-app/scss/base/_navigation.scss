@@ -24,15 +24,13 @@ nav.navigation {
     }
 
     .mobile-nav-trigger {
+        display: none;
         z-index: 199;
         background-color: $white;
         border-left: 1px #ccc solid;
         transition: all $fast-speed ease;
         transform: translateX(30px);
 
-        @include breakpoint(medium only) {
-            //transform: translateX(40px);
-        }
 
         @include breakpoint(landscape) {
             transform: translateX(40px);
@@ -55,83 +53,35 @@ nav.navigation {
 
 
     ul.primary-navigation {
-        opacity: 0;
+        margin: 0;
+        position: relative;
+        display: flex;
+        right: initial;
+        justify-content: flex-end;
+        opacity: 1;
+        height: initial;
+        max-width: initial;
+        padding: initial;
+        flex-direction: row;
         list-style-type: none;
-        z-index: 99;
-        transition: transform, opacity $fast-speed ease;
-        width: 100%;
-        height: 100vh;
-        padding: $medium-spacing;
-        justify-content: center;
-        align-items: flex-start;
-        position: absolute;
-        top: 0;
-        flex-direction: column;
-
-        // @media screen and #{breakpoint(landscape)} and #{breakpoint(small only)} {
-        //     padding: $medium-spacing $medium-spacing $medium-spacing $xlarge-spacing;
-        // }
-
-        @include breakpoint(medium down) {
-            transform: translateX(100%);
-        }
-
-        
-        &.active {
-            @include breakpoint(medium down) {
-                opacity: 1;
-                display: flex;
-                transform: translateX(30px);
-                background-color: $bright-blue;
-
-                li {
-                    opacity: 1;
-                    float: none;
-                    margin-bottom: 24px; 
-
-                    a {
-                        font-family: $font-family-secondary-light;
-                        color: $dark-grey;
-                        font-size: rem-calc(24px);
-                        line-height: rem-calc(40px);
-
-
-                    }
-                }
-            }
-
-        }
-
-        @include breakpoint(large) {
-            margin: 0;
-            position: relative;
-            display: flex;
-            right: initial;
-            justify-content: flex-end;
-            opacity: 1;
-            height: initial;
-            max-width: initial;
-            padding: initial;
-            flex-direction: row;
-        }
 
         li {
             padding: 0px;
-            float: left;
-            opacity: 0;
+            // float: left;
+            // opacity: 0;
             font-size: rem-calc(12px);
             font-weight: 400;
             letter-spacing: 0.5em;
 
-            @include breakpoint(large) {
-                margin-right: $small-spacing;
-                opacity: 1;
-                font-size: rem-calc(13px);
-            }
+            // @include breakpoint(large) {
+            //     margin-right: $small-spacing;
+            //     opacity: 1;
+            //     font-size: rem-calc(13px);
+            // }
 
-            @include breakpoint(xlarge) {
-                margin-right: $large-spacing;
-            }
+            // @include breakpoint(xlarge) {
+            //     margin-right: $large-spacing;
+            // }
  
             &:last-child {
                 margin-right: 0;
@@ -142,7 +92,8 @@ nav.navigation {
                 margin: 0;
                 color: $black;
                 text-transform: uppercase;
-
+                position: relative;
+                z-index: 101;
                 &.active {
                     font-family: $font-family-secondary;
                     font-weight: 700;    
@@ -163,18 +114,25 @@ nav.navigation {
    .navigation-background {
         display: none;
 
-        &.dsk {
-            display: block;
-            position: absolute;
-            z-index: 98;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(20px) brightness(300%);
-            left: 0;
-            right: 0;
-            
-        }
+        // &.dsk {
+        //     display: block;
 
+        // }
+
+    }
+
+    z-index: 99;
+
+    &:after{
+        position: absolute;
+
+        content: "";
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(20px) brightness(200%);
+        left: 0;
+        right: 0;
     }
 
 }
@@ -186,7 +144,7 @@ nav.navigation {
 
 
 header {
-    transition: background-color, width ease $fast-speed*0.5;
+    // transition: background-color, width ease $fast-speed*0.5;
     left: 0;
     background-color: transparent;
 
@@ -196,11 +154,11 @@ header {
 }
 
 main {
-    transition: all ease $fast-speed ;
+    // transition: all ease $fast-speed ;
     left: 0;
     position: relative;
 
-    &.slideLeft {
-        left: -201px;
-    }
+    // &.slideLeft {
+    //     left: -201px;
+    // }
 }

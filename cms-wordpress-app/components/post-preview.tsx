@@ -12,7 +12,7 @@ export default function PostPreview({
 
   return (
     <div className='home-hero-module'>
-      <div className="grid-container full hero full-background pinned">
+      <div className="grid-container full hero full-background sticky">
 
       <div className="grid-x ">
           <div className="cell large-12 ">
