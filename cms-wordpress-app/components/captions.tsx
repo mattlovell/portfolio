@@ -1,14 +1,15 @@
 import Link from 'next/link'
-
+import Categories from './categories'
 interface Props {
     title: string
+    categories: string
     excerpt: string
     customStyling:{
         backgroundcolor: string
     }
     slug?: string
   }
-  export default function Captions({ title, excerpt, customStyling, slug }: Props) {
+  export default function Captions({ title, categories, excerpt, customStyling, slug }: Props) {
 
     const backgroundClass = customStyling?.backgroundcolor;
     return (
@@ -25,6 +26,7 @@ interface Props {
                   className="hover:underline"
                   dangerouslySetInnerHTML={{ __html: title }}
                 ></Link></h2>
+                <Categories categories={categories} />
                 <div
                   dangerouslySetInnerHTML={{ __html: excerpt }}
                 />

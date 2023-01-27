@@ -1,0 +1,20 @@
+.more-stories {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    @include breakpoint(medium) {
+        margin-top: 6rem;
+    }
+
+
+    h2.seperator {
+        font-weight: bold;
+        color: $black;
+        background-color: white;
+        display: inline-block;
+        font-size: 2rem;
+        margin: 4rem 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+}

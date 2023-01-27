@@ -1,11 +1,11 @@
 footer {
     display: block;
-    background-color: $dark-petrol;
-    margin: 0;
+    background-color: $dark-blue;
+
     position: relative;
     color: $white;
     text-align: center;
-
+    z-index: 1;
 
     @include breakpoint(medium) {
         text-align: left;
@@ -28,20 +28,13 @@ footer {
 
     .cell {
 
-        padding: $medium-spacing;
-
-        @include breakpoint(large) {
-            padding: $xlarge-spacing 0 $medium-spacing 0;
-        }
+        padding: $medium-spacing 0;
 
 
         p,span {
-            font-family: $font-family-secondary;
-            font-size: 1rem;
+            font-family: $font-family-primary;
+            font-size: 0.75rem;
             padding-right: 0.5rem;
-        }
-        p {
-            font-weight: bold;
         }
 
         &.alt {

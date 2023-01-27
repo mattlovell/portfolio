@@ -6083,6 +6083,10 @@ h1 a, h2 a, h3 a, h4 a {
   font-family: "proxima-nova-condensed", sans-serif;
 }
 
+h1 {
+  line-height: 1;
+}
+
 span, ul, ol {
   font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -6205,21 +6209,31 @@ h6 {
 
 blockquote {
   font-family: "proxima-nova-condensed", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 0.8125rem;
   font-weight: 400;
   letter-spacing: -0.025em;
   margin-bottom: 40px;
-  color: var(--bq-colour);
   margin-top: 0;
-  padding: 0;
-  border: none;
+  padding: 10px;
+  background-color: #0F52BA;
+  border-radius: 0.5rem;
 }
-@media print, screen and (min-width: 75em) {
-  blockquote {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
+blockquote p, blockquote cite {
+  color: #fff;
+}
+blockquote cite {
+  font-style: normal;
+}
+blockquote cite:before {
+  content: "";
+}
+
+blockquote:nth-child(even) {
+  background-color: #092e67;
+}
+blockquote:nth-child(even) p, blockquote:nth-child(even) cite {
+  color: #fff;
 }
 
 .caption {
@@ -6237,20 +6251,16 @@ blockquote {
 }
 
 .block-btn {
+  font-family: "proxima-nova-condensed", sans-serif;
   z-index: 1;
   color: #000;
-  height: 48px;
-  padding: 0 24px;
+  padding: 0.5rem;
   border: 1px solid #000;
   border-radius: 2px;
-  line-height: 48px;
+  line-height: 1;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 12px;
-  font-weight: 700;
   margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
@@ -6277,20 +6287,16 @@ blockquote {
 }
 
 .block-btn-cta {
+  font-family: "proxima-nova-condensed", sans-serif;
   z-index: 1;
   color: #000;
-  height: 48px;
-  padding: 0 24px;
+  padding: 0.5rem;
   border: 1px solid #000;
   border-radius: 2px;
-  line-height: 48px;
+  line-height: 1;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 12px;
-  font-weight: 700;
   margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
@@ -6317,20 +6323,16 @@ blockquote {
 }
 
 .textarea--white .block-btn-cta {
+  font-family: "proxima-nova-condensed", sans-serif;
   z-index: 1;
   color: #fff;
-  height: 48px;
-  padding: 0 24px;
+  padding: 0.5rem;
   border: 1px solid #fff;
   border-radius: 2px;
-  line-height: 48px;
+  line-height: 1;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 12px;
-  font-weight: 700;
   margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
@@ -6547,10 +6549,9 @@ nav.navigation ul.primary-navigation {
   list-style-type: none;
 }
 nav.navigation ul.primary-navigation li {
-  padding: 0px;
+  padding: 0 10px 0 0px;
   font-size: 0.75rem;
   font-weight: 400;
-  letter-spacing: 0.5em;
 }
 nav.navigation ul.primary-navigation li:last-child {
   margin-right: 0;
@@ -6581,8 +6582,8 @@ nav.navigation:after {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(20px) brightness(200%);
-          backdrop-filter: blur(20px) brightness(200%);
+  -webkit-backdrop-filter: blur(20px) brightness(300%);
+          backdrop-filter: blur(20px) brightness(300%);
   left: 0;
   right: 0;
 }
@@ -6593,7 +6594,7 @@ nav.navigation:after {
 
 header {
   left: 0;
-  background-color: transparent;
+  background-color: rgba(141, 136, 136, 0.2392156863);
 }
 header.open {
   background-color: #000;
@@ -6606,11 +6607,11 @@ main {
 
 footer {
   display: block;
-  background-color: #05242b;
-  margin: 0;
+  background-color: #092e67;
   position: relative;
   color: #fff;
   text-align: center;
+  z-index: 1;
 }
 @media print, screen and (min-width: 48em) {
   footer {
@@ -6629,20 +6630,12 @@ footer ul {
   list-style-type: none;
 }
 footer .cell {
-  padding: 40px;
-}
-@media print, screen and (min-width: 75em) {
-  footer .cell {
-    padding: 160px 0 40px 0;
-  }
+  padding: 40px 0;
 }
 footer .cell p, footer .cell span {
-  font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-family: "proxima-nova-condensed", sans-serif;
+  font-size: 0.75rem;
   padding-right: 0.5rem;
-}
-footer .cell p {
-  font-weight: bold;
 }
 footer .cell.alt {
   background-color: #333;
@@ -6812,6 +6805,14 @@ footer .cell.copyright span {
 .home-hero-module .hero .hero-content img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 10%;
+     object-position: 10%;
+}
+@media print, screen and (min-width: 75em) {
+  .home-hero-module .hero .hero-content img {
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 
 .landscape {
@@ -6944,20 +6945,16 @@ footer .cell.copyright span {
   font-size: 2.25rem;
 }
 .post-body .wordpress-content p a {
+  font-family: "proxima-nova-condensed", sans-serif;
   z-index: 1;
   color: #000;
-  height: 48px;
-  padding: 0 24px;
+  padding: 0.5rem;
   border: 1px solid #000;
   border-radius: 2px;
-  line-height: 48px;
+  line-height: 1;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 12px;
-  font-weight: 700;
   margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
@@ -7058,96 +7055,98 @@ footer .cell.copyright span {
 .single .captions .textarea--transparent {
   color: black;
 }
-.single .captions .textarea--transparent p > a {
+.single .captions .textarea--transparent p > a, .single .captions .textarea--transparent a {
   color: black;
   text-decoration: underline;
 }
 .single .captions .textarea--transparent .wordpress-content > a {
   order: 3;
-  z-index: 1;
-  color: #000;
-  height: 48px;
-  padding: 0 24px;
-  border: 1px solid #000;
-  border-radius: 2px;
-  line-height: 48px;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 12px;
-  font-weight: 700;
-  margin: 40px 0 0 0;
-  position: relative;
-  transition: color 400ms;
+  text-decoration: underline;
 }
-.single .captions .textarea--transparent .wordpress-content > a:before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: #0F52BA;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transform-origin: 100% 100%;
-  transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
-  transform: scaleX(0);
-}
-.single .captions .textarea--transparent .wordpress-content > a:hover {
-  color: #fff;
-}
-.single .captions .textarea--transparent .wordpress-content > a:hover:before {
-  transform-origin: 0 100%;
-  transform: scaleX(1);
+@media print, screen and (min-width: 75em) {
+  .single .captions .textarea--transparent .wordpress-content > a {
+    font-family: "proxima-nova-condensed", sans-serif;
+    z-index: 1;
+    color: #000;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 2px;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin: 40px 0 0 0;
+    position: relative;
+    transition: color 400ms;
+  }
+  .single .captions .textarea--transparent .wordpress-content > a:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #0F52BA;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform-origin: 100% 100%;
+    transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
+    transform: scaleX(0);
+  }
+  .single .captions .textarea--transparent .wordpress-content > a:hover {
+    color: #fff;
+  }
+  .single .captions .textarea--transparent .wordpress-content > a:hover:before {
+    transform-origin: 0 100%;
+    transform: scaleX(1);
+  }
 }
 .single .captions .textarea--white {
   color: white;
 }
-.single .captions .textarea--white p > a {
+.single .captions .textarea--white p > a, .single .captions .textarea--white a {
   color: white;
   text-decoration: underline;
 }
 .single .captions .textarea--white .wordpress-content > a {
   order: 3;
-  z-index: 1;
-  color: #fff;
-  height: 48px;
-  padding: 0 24px;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  line-height: 48px;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 12px;
-  font-weight: 700;
-  margin: 40px 0 0 0;
-  position: relative;
-  transition: color 400ms;
+  text-decoration: underline;
 }
-.single .captions .textarea--white .wordpress-content > a:before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: #0F52BA;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transform-origin: 100% 100%;
-  transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
-  transform: scaleX(0);
-}
-.single .captions .textarea--white .wordpress-content > a:hover {
-  color: #fff;
-}
-.single .captions .textarea--white .wordpress-content > a:hover:before {
-  transform-origin: 0 100%;
-  transform: scaleX(1);
+@media print, screen and (min-width: 75em) {
+  .single .captions .textarea--white .wordpress-content > a {
+    font-family: "proxima-nova-condensed", sans-serif;
+    z-index: 1;
+    color: #fff;
+    padding: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin: 40px 0 0 0;
+    position: relative;
+    transition: color 400ms;
+  }
+  .single .captions .textarea--white .wordpress-content > a:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #0F52BA;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform-origin: 100% 100%;
+    transition: transform 400ms cubic-bezier(0.16, 0.85, 0.45, 1) 0s;
+    transform: scaleX(0);
+  }
+  .single .captions .textarea--white .wordpress-content > a:hover {
+    color: #fff;
+  }
+  .single .captions .textarea--white .wordpress-content > a:hover:before {
+    transform-origin: 0 100%;
+    transform: scaleX(1);
+  }
 }
 .single .captions .wordpress-content {
   display: flex;
@@ -7159,15 +7158,7 @@ footer .cell.copyright span {
   display: none;
 }
 .single .captions .wordpress-content a {
-  flex-wrap: wrap;
-  flex: 1 100%;
-  width: 100%;
-}
-@media print, screen and (min-width: 75em) {
-  .single .captions .wordpress-content a {
-    flex: 1 55%;
-    max-width: 55%;
-  }
+  word-wrap: break-word;
 }
 .single .captions .wordpress-content p {
   flex-wrap: wrap;
@@ -7175,11 +7166,9 @@ footer .cell.copyright span {
   order: 1;
   font-size: 1.25rem;
   width: 100%;
+  word-wrap: break-word;
 }
-.single .captions .wordpress-content p a {
-  font-size: 75%;
-}
-@media print, screen and (min-width: 75em) {
+@media print, screen and (min-width: 48em) {
   .single .captions .wordpress-content p {
     flex: 1 55%;
     font-size: 2.25rem;
@@ -7201,7 +7190,6 @@ footer .cell.copyright span {
 }
 .single .captions .wordpress-content figure.wp-block-embed div.wp-block-embed__wrapper iframe {
   width: 100%;
-  height: 100%;
   min-width: 300px;
   min-height: 100%;
 }
@@ -7235,19 +7223,11 @@ footer .cell.copyright span {
   border-radius: 1rem;
 }
 .single .captions h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 @media print, screen and (min-width: 75em) {
   .single .captions h1 {
-    font-size: 8rem;
-  }
-}
-.single .captions span {
-  font-size: 2rem;
-  font-weight: bold;
-}
-@media print, screen and (min-width: 75em) {
-  .single .captions span {
     font-size: 4rem;
   }
 }
@@ -7290,6 +7270,23 @@ footer .cell.copyright span {
   color: white;
   font-size: 1.5rem;
 }
+.captions .textarea--white span span {
+  color: white;
+  line-height: 1;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 1px white solid;
+  border-radius: 0.25rem;
+}
+@media print, screen and (min-width: 75em) {
+  .captions .textarea--white span span {
+    margin-bottom: 1rem;
+  }
+}
 .captions .textarea--transparent {
   border-radius: 1rem;
   padding: 2rem;
@@ -7298,4 +7295,98 @@ footer .cell.copyright span {
 }
 .captions .textarea--transparent div p {
   font-size: 1.5rem;
+}
+.captions .textarea--transparent span span {
+  line-height: 1;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  border: 1px black solid;
+  border-radius: 0.25rem;
+}
+
+.more-stories {
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+}
+@media print, screen and (min-width: 48em) {
+  .more-stories {
+    margin-top: 6rem;
+  }
+}
+.more-stories h2.seperator {
+  font-weight: bold;
+  color: #000;
+  background-color: white;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 4rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.page {
+  position: relative;
+  top: 120px;
+  margin-bottom: 120px;
+  transform: none;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media print, screen and (min-width: 75em) {
+  .page {
+    top: 160px;
+    margin-bottom: 160px;
+  }
+}
+.page .page-content .landscape .content {
+  position: relative;
+  top: unset;
+  transform: unset;
+}
+@media print, screen and (min-width: 48em) {
+  .page .page-content .landscape .content .textarea .wordpress-content {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+.page .page-content .landscape .content h1 {
+  color: #006269;
+  -moz-column-span: all;
+       column-span: all;
+}
+.page .page-content .landscape .content h2, .page .page-content .landscape .content h3, .page .page-content .landscape .content h4, .page .page-content .landscape .content h5, .page .page-content .landscape .content h6 {
+  -moz-column-span: all;
+       column-span: all;
+  font-weight: bold;
+  font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  color: #0F52BA;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+@media print, screen and (min-width: 48em) {
+  .page .page-content .landscape .content h2, .page .page-content .landscape .content h3, .page .page-content .landscape .content h4, .page .page-content .landscape .content h5, .page .page-content .landscape .content h6 {
+    max-width: 50%;
+  }
+}
+.page .page-content .landscape .content h5 {
+  margin-top: 4rem;
+}
+.page .page-content .landscape .content p {
+  font-size: 1.25em;
+  color: #092e67;
+}
+.page .page-content .landscape .content p:nth-child(even) {
+  color: #05242b;
+}
+.page .page-content .landscape .content blockquote p {
+  color: #fff;
 }/*# sourceMappingURL=global.css.map */

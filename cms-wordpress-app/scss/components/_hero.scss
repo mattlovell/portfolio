@@ -17,6 +17,10 @@
 
             img {
                 object-fit: cover; // replace with IE compat version
+                object-position: 10%;
+                @include breakpoint(large){
+                    object-position: center;
+                }
             }
         }
 

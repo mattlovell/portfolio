@@ -1,0 +1,65 @@
+.page {
+    position: relative;
+    top: 120px;
+    margin-bottom: 120px;
+    transform: none;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(large) {
+        top: 160px;
+        margin-bottom: 160px;
+    }
+
+    .page-content {
+        .landscape {
+            .content {
+                position: relative;
+                top: unset;
+                transform: unset;
+
+                .textarea {
+                    .wordpress-content {
+                        @include breakpoint(medium) {
+                            column-count: 2;
+                            column-gap: 2rem;
+                        }
+                    }
+
+                }
+                h1 {
+                    color: $petrol;
+                    column-span: all;
+                }
+                h2,h3,h4,h5,h6  {
+                    column-span: all;
+                    font-weight: bold;
+                    font-family: $font-family-secondary;
+                    color: $bright-blue;
+                    line-height: 1;
+                    margin-bottom: 2rem;
+                    @include breakpoint(medium){
+                        max-width: 50%;
+                    }
+                }
+
+                h5 {
+                    margin-top: 4rem;
+                }
+                p {
+                    font-size: 1.25em;
+                    color: $dark-blue;
+                }
+
+                p:nth-child(even) {
+                    color: $dark-petrol;
+                }
+
+                blockquote p {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

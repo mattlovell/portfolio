@@ -15,7 +15,7 @@ export default function Index({preview, testPosts:{nodes} }) {
   const stuff = nodes;
 
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Head>
         <title>MJLOVELL.com - Works and Work In Progress</title>
       </Head>

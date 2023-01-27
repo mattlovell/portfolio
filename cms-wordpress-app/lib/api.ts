@@ -47,7 +47,7 @@ export async function getPreviewPost(id, idType = 'DATABASE_ID') {
 export async function getAllPostsWithSlug() {
   const data = await fetchAPI(`
     {
-      posts(first: 10) {
+      posts(first: 100) {
         edges {
           node {
             slug
@@ -111,6 +111,13 @@ export async function getAllPostsForHome2(preview) {
           customStyling {
             backgroundcolor
           }
+          categories {
+            edges {
+              node {
+                name
+              }
+            }
+          }
         }
       }
     }
@@ -126,30 +133,43 @@ export async function getAllPostsForHome2(preview) {
   return data?.posts
 }
 
-export async function getMediaItemsForPost(postID){
+// export async function getMediaItemsForPost(postID){
+//   const data = await fetchAPI(`
+//   {
+//     mediaItems(where: {parentIn: $postID}) {
+//       edges {
+//         node {
+//           mediaItemUrl
+//           parentId
+//           title
+//         }
+//       }
+//     }
+//   }
+//   `,
+//   {
+//     variables: {
+//       onlyEnabled: !postID,
+//       postID,
+//     },
+//   }
+//   )
+//   return data //?.mediaItems
+// }
+export async function getAllPagesWithSlugs() {
   const data = await fetchAPI(`
   {
-    mediaItems(where: {parentIn: $postID}) {
+    pages(first: 100) {
       edges {
         node {
-          mediaItemUrl
-          parentId
-          title
+          slug
         }
       }
     }
   }
-  `,
-  {
-    variables: {
-      onlyEnabled: !postID,
-      postID,
-    },
-  }
-  )
-  return data //?.mediaItems
+  `);
+  return data?.pages
 }
-
 export async function getPostAndMorePosts(slug, preview, previewData) {
   const postPreview = preview && previewData?.post
   // The slug may be the id of an unpublished post
@@ -229,20 +249,10 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
             : ''
         }
       }
-
       posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
         edges {
           node {
             ...PostFields
-          }
-        }
-      }
-      mediaItems(where: {parent: $id}) {
-        edges {
-          node {
-            mediaItemUrl
-            parentId
-            title
           }
         }
       }
@@ -272,4 +282,19 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
   if (data.posts.edges.length > 2) data.posts.edges.pop()
 
   return data
+}
+
+
+
+export async function getPageBySlug(slug) {
+  const data = await fetchAPI(`
+  {
+    page(id: "${slug}", idType: URI) {
+      title
+      content
+      slug
+    }
+  }
+  `);
+  return data?.page
 }

@@ -11,6 +11,7 @@ export default function AllStories({ posts }) {
             title={node.title}
             coverImage={node.featuredImage}
             date={node.date}
+            categories={node.categories}
             slug={node.slug}
             excerpt={node.excerpt}
             customStyling={node.customStyling}

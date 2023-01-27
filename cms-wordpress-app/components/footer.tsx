@@ -1,18 +1,17 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+
 
 export default function Footer() {
   return (
-    <footer className="">
-      <Container>
-        <div className="">
+    <footer>
+        <div className="grid-container">
 
-          <div className="">
- 
- 
+          <div className="grid-x">
+            <div className="cell small-12">
+              <span>&copy;2023 MJLOVELL.COM</span>
+            </div>
           </div>
         </div>
-      </Container>
+
     </footer>
   )
 }

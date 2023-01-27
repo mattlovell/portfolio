@@ -4,6 +4,7 @@ export default function PostPreview({
   title,
   coverImage,
   excerpt,
+  categories,
   date,
   slug,
   customStyling
@@ -27,7 +28,7 @@ export default function PostPreview({
           </div>
           </div>
       </div>
-      <Captions title={title} excerpt={excerpt} customStyling={customStyling} slug={slug} />
+      <Captions title={title} categories={categories} excerpt={excerpt} customStyling={customStyling} slug={slug} />
 
     </div>
 

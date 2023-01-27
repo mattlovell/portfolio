@@ -11,6 +11,7 @@ export default function AllStoriesAlt({ posts }) {
             title={nodes.title}
             coverImage={nodes.featuredImage}
             date={nodes.date}
+            categories={nodes.categories}
             slug={nodes.slug}
             excerpt={nodes.excerpt}
             customStyling={nodes.customStyling}
