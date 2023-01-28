@@ -39,6 +39,8 @@
         }
 
 
+
+
         .textarea--transparent, .textarea--white {
             backdrop-filter: none;
             background: none;
@@ -61,6 +63,7 @@
                     }
                 }
         }
+
         .textarea--white {
             color: white;
 
@@ -101,7 +104,7 @@
                 width: 100%;
                 word-wrap: break-word;
 
-                @include breakpoint(medium) {
+                @include breakpoint(large) {
                     flex: 1 55%;
                     font-size: 2.25rem;
                     max-width: 55%;
@@ -111,7 +114,9 @@
 
             figure {
                 order:0;
-                flex: 1 50%;
+                @include breakpoint(large) {
+                    flex: 1 50%;
+                }
                 &.wp-block-embed  {
                     order: 2;
                     border: none;
@@ -136,9 +141,8 @@
                 }
 
                 &.wp-block-image {
-                    border-right: 10px transparent solid;
                     margin-bottom: 10px;
-                    @include breakpoint(medium){
+                    @include breakpoint(large){
                         border-right: 10px transparent solid;
                         margin-bottom: 10px;
                     }

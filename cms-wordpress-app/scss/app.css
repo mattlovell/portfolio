@@ -6215,9 +6215,14 @@ blockquote {
   letter-spacing: -0.025em;
   margin-bottom: 40px;
   margin-top: 0;
-  padding: 10px;
+  padding: 1rem;
   background-color: #0F52BA;
   border-radius: 0.5rem;
+}
+@media print, screen and (min-width: 75em) {
+  blockquote {
+    padding: 2rem;
+  }
 }
 blockquote p, blockquote cite {
   color: #fff;
@@ -6261,7 +6266,6 @@ blockquote:nth-child(even) p, blockquote:nth-child(even) cite {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
 }
@@ -6297,7 +6301,6 @@ blockquote:nth-child(even) p, blockquote:nth-child(even) cite {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
 }
@@ -6325,15 +6328,14 @@ blockquote:nth-child(even) p, blockquote:nth-child(even) cite {
 .textarea--white .block-btn-cta {
   font-family: "proxima-nova-condensed", sans-serif;
   z-index: 1;
-  color: #fff;
+  color: #000;
   padding: 0.5rem;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   border-radius: 2px;
   line-height: 1;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
 }
@@ -6805,8 +6807,8 @@ footer .cell.copyright span {
 .home-hero-module .hero .hero-content img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 10%;
-     object-position: 10%;
+  -o-object-position: 30%;
+     object-position: 30%;
 }
 @media print, screen and (min-width: 75em) {
   .home-hero-module .hero .hero-content img {
@@ -6955,7 +6957,6 @@ footer .cell.copyright span {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  margin: 40px 0 0 0;
   position: relative;
   transition: color 400ms;
 }
@@ -7075,7 +7076,6 @@ footer .cell.copyright span {
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    margin: 40px 0 0 0;
     position: relative;
     transition: color 400ms;
   }
@@ -7123,7 +7123,6 @@ footer .cell.copyright span {
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    margin: 40px 0 0 0;
     position: relative;
     transition: color 400ms;
   }
@@ -7168,7 +7167,7 @@ footer .cell.copyright span {
   width: 100%;
   word-wrap: break-word;
 }
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width: 75em) {
   .single .captions .wordpress-content p {
     flex: 1 55%;
     font-size: 2.25rem;
@@ -7177,7 +7176,11 @@ footer .cell.copyright span {
 }
 .single .captions .wordpress-content figure {
   order: 0;
-  flex: 1 50%;
+}
+@media print, screen and (min-width: 75em) {
+  .single .captions .wordpress-content figure {
+    flex: 1 50%;
+  }
 }
 .single .captions .wordpress-content figure.wp-block-embed {
   order: 2;
@@ -7202,10 +7205,9 @@ footer .cell.copyright span {
   }
 }
 .single .captions .wordpress-content figure.wp-block-image {
-  border-right: 10px transparent solid;
   margin-bottom: 10px;
 }
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width: 75em) {
   .single .captions .wordpress-content figure.wp-block-image {
     border-right: 10px transparent solid;
     margin-bottom: 10px;
@@ -7248,6 +7250,12 @@ footer .cell.copyright span {
 .captions h2 {
   color: var(--hero-title);
   font-weight: bold;
+  line-height: 1;
+}
+@media print, screen and (min-width: 75em) {
+  .captions h2 {
+    line-height: 1.4;
+  }
 }
 .captions h3 {
   color: var(--hero-subtitle);
@@ -7255,10 +7263,15 @@ footer .cell.copyright span {
 }
 .captions .textarea--white {
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1rem;
   -webkit-backdrop-filter: blur(15px) brightness(115%);
           backdrop-filter: blur(15px) brightness(115%);
   background: rgba(255, 255, 255, 0.25);
+}
+@media print, screen and (min-width: 75em) {
+  .captions .textarea--white {
+    padding: 2rem;
+  }
 }
 .captions .textarea--white h1 {
   color: white;
@@ -7289,9 +7302,15 @@ footer .cell.copyright span {
 }
 .captions .textarea--transparent {
   border-radius: 1rem;
-  padding: 2rem;
-  -webkit-backdrop-filter: blur(15px) brightness(115%);
-          backdrop-filter: blur(15px) brightness(115%);
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(15px) brightness(150%);
+          backdrop-filter: blur(15px) brightness(150%);
+  color: #000;
+}
+@media print, screen and (min-width: 75em) {
+  .captions .textarea--transparent {
+    padding: 2rem;
+  }
 }
 .captions .textarea--transparent div p {
   font-size: 1.5rem;
@@ -7311,22 +7330,26 @@ footer .cell.copyright span {
 .more-stories {
   position: relative;
   z-index: 1;
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 @media print, screen and (min-width: 48em) {
   .more-stories {
-    margin-top: 6rem;
+    padding-top: 10rem;
+    margin-top: 10rem;
   }
 }
-.more-stories h2.seperator {
+.more-stories .seperator {
   font-weight: bold;
   color: #000;
   background-color: white;
-  display: inline-block;
-  font-size: 2rem;
+  display: inline-flex;
   margin: 4rem 0;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+.more-stories .seperator h2 {
+  font-size: 2rem;
+  margin-right: 2rem;
 }
 
 .page {
@@ -7358,35 +7381,53 @@ footer .cell.copyright span {
          column-gap: 2rem;
   }
 }
-.page .page-content .landscape .content h1 {
+.page .page-content .landscape .content .textarea .wordpress-content h1 {
   color: #006269;
   -moz-column-span: all;
        column-span: all;
 }
-.page .page-content .landscape .content h2, .page .page-content .landscape .content h3, .page .page-content .landscape .content h4, .page .page-content .landscape .content h5, .page .page-content .landscape .content h6 {
+.page .page-content .landscape .content .textarea .wordpress-content h2, .page .page-content .landscape .content .textarea .wordpress-content h3, .page .page-content .landscape .content .textarea .wordpress-content h4, .page .page-content .landscape .content .textarea .wordpress-content h5, .page .page-content .landscape .content .textarea .wordpress-content h6 {
   -moz-column-span: all;
        column-span: all;
   font-weight: bold;
   font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
   color: #0F52BA;
   line-height: 1;
-  margin-bottom: 2rem;
 }
 @media print, screen and (min-width: 48em) {
-  .page .page-content .landscape .content h2, .page .page-content .landscape .content h3, .page .page-content .landscape .content h4, .page .page-content .landscape .content h5, .page .page-content .landscape .content h6 {
+  .page .page-content .landscape .content .textarea .wordpress-content h2, .page .page-content .landscape .content .textarea .wordpress-content h3, .page .page-content .landscape .content .textarea .wordpress-content h4, .page .page-content .landscape .content .textarea .wordpress-content h5, .page .page-content .landscape .content .textarea .wordpress-content h6 {
     max-width: 50%;
   }
 }
-.page .page-content .landscape .content h5 {
+.page .page-content .landscape .content .textarea .wordpress-content h5 {
+  font-size: 1.5rem;
   margin-top: 4rem;
 }
-.page .page-content .landscape .content p {
+.page .page-content .landscape .content .textarea .wordpress-content p {
   font-size: 1.25em;
   color: #092e67;
 }
-.page .page-content .landscape .content p:nth-child(even) {
+.page .page-content .landscape .content .textarea .wordpress-content p:nth-child(even) {
   color: #05242b;
 }
-.page .page-content .landscape .content blockquote p {
+.page .page-content .landscape .content .textarea .wordpress-content blockquote {
+  -moz-column-span: all;
+       column-span: all;
+}
+.page .page-content .landscape .content .textarea .wordpress-content blockquote p {
+  font-family: "new-order", “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
   color: #fff;
+}
+.page .page-content .landscape .content .textarea .wordpress-content blockquote cite {
+  letter-spacing: normal;
+}
+
+.intro .captions--textarea {
+  margin-top: 3rem;
+}
+@media print, screen and (min-width: 75em) {
+  .intro .captions--textarea {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=app.css.map */

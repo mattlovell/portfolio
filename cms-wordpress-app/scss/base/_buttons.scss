@@ -8,6 +8,6 @@
 
 .textarea--white {
   .block-btn-cta {
-    @include block-button($white, $white, $dark-grey);
+    @include block-button($black, $white, $dark-grey);
   }
 }

@@ -25,40 +25,52 @@
                             column-count: 2;
                             column-gap: 2rem;
                         }
+                        h1 {
+                            color: $petrol;
+                            column-span: all;
+                        }
+                        h2,h3,h4,h5,h6  {
+                            column-span: all;
+                            font-weight: bold;
+                            font-family: $font-family-secondary;
+                            color: $bright-blue;
+                            line-height: 1;
+  
+                            @include breakpoint(medium){
+                                max-width: 50%;
+                            }
+                        }
+
+                        h5 {
+                            font-size: 1.5rem;
+                            margin-top: 4rem;
+                        }
+                        p {
+                            font-size: 1.25em;
+                            color: $dark-blue;
+                        }
+
+                        p:nth-child(even) {
+                            color: $dark-petrol;
+                        }
+
+                        blockquote
+                        {
+                            column-span: all;
+                            p {
+                                font-family: $font-family-secondary;
+                                letter-spacing: normal;
+
+                                color: $white;
+                            }
+                            cite {
+                                letter-spacing: normal;
+                            }
+                        }
                     }
 
                 }
-                h1 {
-                    color: $petrol;
-                    column-span: all;
-                }
-                h2,h3,h4,h5,h6  {
-                    column-span: all;
-                    font-weight: bold;
-                    font-family: $font-family-secondary;
-                    color: $bright-blue;
-                    line-height: 1;
-                    margin-bottom: 2rem;
-                    @include breakpoint(medium){
-                        max-width: 50%;
-                    }
-                }
 
-                h5 {
-                    margin-top: 4rem;
-                }
-                p {
-                    font-size: 1.25em;
-                    color: $dark-blue;
-                }
-
-                p:nth-child(even) {
-                    color: $dark-petrol;
-                }
-
-                blockquote p {
-                    color: $white;
-                }
             }
         }
     }

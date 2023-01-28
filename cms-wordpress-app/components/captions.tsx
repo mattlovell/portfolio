@@ -19,7 +19,7 @@ interface Props {
         <div className="cell">
 
           <div className="grid-x">
-            <div className="cell large-5 small-12">
+            <div className="cell small-12 medium-9 large-5">
               <div className={`textarea--${backgroundClass}`} >
                 <h2><Link
                   href={`/posts/${slug}`}

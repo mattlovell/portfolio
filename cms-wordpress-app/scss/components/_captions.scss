@@ -10,6 +10,10 @@
         h2 {
             color: var(--hero-title);
             font-weight: bold;
+            line-height: 1;
+            @include breakpoint(large){
+                line-height:1.4;
+            }
         }
 
         h3 {
@@ -22,9 +26,13 @@
 
             &--white  {
                 border-radius:1rem;
-                padding: 2rem;
+                padding: 1rem;
                 backdrop-filter: blur(15px) brightness(115%);
                 background: rgba(255, 255, 255, 0.25);
+
+                @include breakpoint(large){
+                    padding: 2rem;
+                }
                 h1 {
                     color: white;
                 }
@@ -47,6 +55,7 @@
                     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
                     border: 1px white solid;
                     border-radius: 0.25rem;
+
                     @include breakpoint(large){
                         margin-bottom: 1rem;
                     }
@@ -55,10 +64,15 @@
 
             &--transparent {
                 border-radius:1rem;
-                padding: 2rem;
-                backdrop-filter: blur(15px) brightness(115%);
-                div p {
+                padding: 1rem;
+                backdrop-filter: blur(15px) brightness(150%);
+                color: $black;
 
+                @include breakpoint(large){
+                    padding: 2rem;
+                }
+
+                div p {
                     font-size: 1.5rem;
                 }
                 span span {

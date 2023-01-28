@@ -7,11 +7,14 @@ blockquote {
 
     margin-bottom: 40px; 
     margin-top: 0;
-    padding: 10px;
+    padding: 1rem;
 
     background-color: $bright-blue;
     border-radius: 0.5rem;
 
+    @include breakpoint(large){
+        padding: 2rem;
+    }
     p, cite {
         color: $white;
     }
@@ -23,6 +26,7 @@ blockquote {
         font-style: normal;
 
     }
+    
 }
 
 blockquote:nth-child(even) {

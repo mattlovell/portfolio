@@ -1,0 +1,8 @@
+.intro {
+    .captions--textarea {
+        margin-top: 3rem;
+        @include breakpoint(large) {
+            margin-top: 0;
+        }
+    }
+}
