@@ -41,11 +41,6 @@ p {
     @include breakpoint(large){
         font-size: rem-calc(18px);
     }
-    
-    strong {
-        font-weight: 500;
-        line-height: 1.4;
-    }
 }
 
 .pre-title {

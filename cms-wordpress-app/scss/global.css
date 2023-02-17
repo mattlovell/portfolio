@@ -6062,7 +6062,6 @@ header {
   top: 0;
   z-index: 100;
   height: 80px;
-  background-color: transparent;
 }
 @media print, screen and (min-width: 75em) {
   header {
@@ -6110,10 +6109,6 @@ p {
   p {
     font-size: 1.125rem;
   }
-}
-p strong {
-  font-weight: 500;
-  line-height: 1.4;
 }
 
 .pre-title {
@@ -6398,7 +6393,7 @@ a.underline:hover:after {
   fill: #DFFF2F;
 }
 
-body {
+main {
   -webkit-animation: fadeInAnimation ease 2s;
           animation: fadeInAnimation ease 2s;
   -webkit-animation-iteration-count: 1;
@@ -6578,14 +6573,14 @@ nav.navigation ul.primary-navigation li a.active {
 nav.navigation .navigation-background {
   display: none;
 }
-nav.navigation:after {
+nav.navigation:before {
   position: absolute;
+  -webkit-backdrop-filter: brightness(200%) blur(50px);
+          backdrop-filter: brightness(200%) blur(50px);
   content: "";
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(20px) brightness(300%);
-          backdrop-filter: blur(20px) brightness(300%);
   left: 0;
   right: 0;
 }
@@ -7159,7 +7154,7 @@ footer .cell.copyright span {
 .single .captions .wordpress-content a {
   word-wrap: break-word;
 }
-.single .captions .wordpress-content p {
+.single .captions .wordpress-content p, .single .captions .wordpress-content h1, .single .captions .wordpress-content h2, .single .captions .wordpress-content h3, .single .captions .wordpress-content h4, .single .captions .wordpress-content h5, .single .captions .wordpress-content span {
   flex-wrap: wrap;
   flex: 1 100%;
   order: 1;
@@ -7168,11 +7163,14 @@ footer .cell.copyright span {
   word-wrap: break-word;
 }
 @media print, screen and (min-width: 75em) {
-  .single .captions .wordpress-content p {
+  .single .captions .wordpress-content p, .single .captions .wordpress-content h1, .single .captions .wordpress-content h2, .single .captions .wordpress-content h3, .single .captions .wordpress-content h4, .single .captions .wordpress-content h5, .single .captions .wordpress-content span {
     flex: 1 55%;
     font-size: 2.25rem;
     max-width: 55%;
   }
+}
+.single .captions .wordpress-content p strong, .single .captions .wordpress-content h1 strong, .single .captions .wordpress-content h2 strong, .single .captions .wordpress-content h3 strong, .single .captions .wordpress-content h4 strong, .single .captions .wordpress-content h5 strong, .single .captions .wordpress-content span strong {
+  font-weight: 700;
 }
 .single .captions .wordpress-content figure {
   order: 0;
@@ -7251,11 +7249,6 @@ footer .cell.copyright span {
   color: var(--hero-title);
   font-weight: bold;
   line-height: 1;
-}
-@media print, screen and (min-width: 75em) {
-  .captions h2 {
-    line-height: 1.4;
-  }
 }
 .captions h3 {
   color: var(--hero-subtitle);

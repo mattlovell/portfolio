@@ -9,6 +9,7 @@ interface Props {
     }
     slug?: string
   }
+
   export default function Captions({ title, categories, excerpt, customStyling, slug }: Props) {
 
     const backgroundClass = customStyling?.backgroundcolor;
@@ -30,7 +31,7 @@ interface Props {
                 <div
                   dangerouslySetInnerHTML={{ __html: excerpt }}
                 />
-                <a href={`/posts/${slug}`} className="block-btn-cta">Read more</a>
+                <Link href={`/posts/${slug}`} className="block-btn-cta">Read more</Link>
               </div>
             </div>
             </div>

@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 interface Props {
   title: string
@@ -14,6 +15,12 @@ interface Props {
 }
 
 export default function CoverImage({ title, coverImage, blur, slug }: Props) {
+  const [clicked, setClicked] = useState('');
+
+  const handleClick = () => {
+    clicked ? setClicked('') : setClicked('base-state click-state');
+  };
+
   const image = (
     <Image
       width={2000}
@@ -29,7 +36,7 @@ export default function CoverImage({ title, coverImage, blur, slug }: Props) {
   return (
     <div className={`blur blur--${blur}`}>
       {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+        <Link href={`/posts/${slug}`} onClick={handleClick} aria-label={title}>
           {image}
         </Link>
       ) : (

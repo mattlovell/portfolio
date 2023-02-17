@@ -3,7 +3,7 @@ $slow-speed: 2s;
 $medium-speed: 1s;
 $fast-speed: 0.5s;
 
-body {
+main {
    @include fade-in-animation();
 }
 @keyframes fadeInAnimation {
