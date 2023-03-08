@@ -35,8 +35,7 @@ export default function Intro() {
                 <div className='grid-x align-center-middle'>
                 <Image
                     src={scrollImg} alt="Down"
-                    width={50}
-                    height={50}></Image>
+                    width={50}></Image>
                 </div>
 
               </div>

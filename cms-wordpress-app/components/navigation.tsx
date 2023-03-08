@@ -13,8 +13,7 @@ export default function Navigation() {
                         <div className='logo'>
                             <Image 
                             src={logoImg} alt="Logo"
-                            width={50}
-                            height={50}></Image>
+                            width={50} priority></Image>
                             <span>MJLOVELL</span>
 
                         </div>
