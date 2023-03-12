@@ -647,7 +647,6 @@ ul.no-bullet, ol.no-bullet {
     background: transparent !important;
     color: black !important;
     -webkit-print-color-adjust: economy;
-       color-adjust: economy;
             print-color-adjust: economy;
     box-shadow: none !important;
     text-shadow: none !important;
@@ -677,22 +676,22 @@ ul.no-bullet, ol.no-bullet {
     display: table-cell !important;
   }
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
   a[href]:after {
     content: " (" attr(href) ")";
   }
   .ir a:after,
-a[href^="javascript:"]:after,
-a[href^="#"]:after {
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #8a8a8a;
     page-break-inside: avoid;
   }
@@ -700,7 +699,7 @@ blockquote {
     display: table-header-group;
   }
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
   img {
@@ -710,13 +709,13 @@ img {
     margin: 0.5cm;
   }
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
   .print-break-inside {
@@ -5746,13 +5745,13 @@ h3 {
 }
 @media screen and (orientation: landscape) {
   .show-for-landscape,
-.hide-for-portrait {
+  .hide-for-portrait {
     display: block !important;
   }
 }
 @media screen and (orientation: portrait) {
   .show-for-landscape,
-.hide-for-portrait {
+  .hide-for-portrait {
     display: none !important;
   }
 }
@@ -5763,13 +5762,13 @@ h3 {
 }
 @media screen and (orientation: landscape) {
   .hide-for-landscape,
-.show-for-portrait {
+  .show-for-portrait {
     display: none !important;
   }
 }
 @media screen and (orientation: portrait) {
   .hide-for-landscape,
-.show-for-portrait {
+  .show-for-portrait {
     display: block !important;
   }
 }
@@ -5999,7 +5998,6 @@ body.servicesLandingPage main, body.errorContentPage main, body.defaultContentPa
 }
 
 .caseStudyContentPage .hero {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: -1;
@@ -6010,17 +6008,6 @@ body.servicesLandingPage main, body.errorContentPage main, body.defaultContentPa
   z-index: 1;
 }
 
-@-webkit-keyframes fadeInPartialLighten {
-  0% {
-    -webkit-backdrop-filter: blur(15px) brightness(100%);
-            backdrop-filter: blur(15px) brightness(100%);
-  }
-  100% {
-    -webkit-backdrop-filter: blur(15px) brightness(200%);
-            backdrop-filter: blur(15px) brightness(200%);
-  }
-}
-
 @keyframes fadeInPartialLighten {
   0% {
     -webkit-backdrop-filter: blur(15px) brightness(100%);
@@ -6029,16 +6016,6 @@ body.servicesLandingPage main, body.errorContentPage main, body.defaultContentPa
   100% {
     -webkit-backdrop-filter: blur(15px) brightness(200%);
             backdrop-filter: blur(15px) brightness(200%);
-  }
-}
-@-webkit-keyframes fadeInPartial {
-  0% {
-    -webkit-backdrop-filter: blur(15px) brightness(100%);
-            backdrop-filter: blur(15px) brightness(100%);
-  }
-  100% {
-    -webkit-backdrop-filter: blur(15px) brightness(60%);
-            backdrop-filter: blur(15px) brightness(60%);
   }
 }
 @keyframes fadeInPartial {
@@ -6103,7 +6080,7 @@ p {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.4;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 @media print, screen and (min-width: 75em) {
   p {
@@ -6240,8 +6217,8 @@ blockquote:nth-child(even) p, blockquote:nth-child(even) cite {
   width: 33%;
   background-color: grey;
   color: #000;
-  padding: 40px;
-  margin: 40px;
+  padding: 2.5rem;
+  margin: 2.5rem;
 }
 .caption.align-right {
   margin-left: auto;
@@ -6381,7 +6358,7 @@ a.underline:hover:after {
 .social-links a svg {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 @media print, screen and (min-width: 75em) {
   .social-links a svg {
@@ -6394,21 +6371,9 @@ a.underline:hover:after {
 }
 
 main {
-  -webkit-animation: fadeInAnimation ease 2s;
-          animation: fadeInAnimation ease 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
@@ -6435,7 +6400,6 @@ video {
 .cookie-banner {
   background-color: #DFFF2F;
   color: #000;
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
 }
@@ -6627,7 +6591,7 @@ footer ul {
   list-style-type: none;
 }
 footer .cell {
-  padding: 40px 0;
+  padding: 2.5rem 0;
 }
 footer .cell p, footer .cell span {
   font-family: "proxima-nova-condensed", sans-serif;
@@ -6648,7 +6612,7 @@ footer .cell.alt {
     position: absolute;
     top: 0;
     z-index: 0;
-    margin-left: -40px;
+    margin-left: -2.5rem;
     height: 100%;
     width: 100%;
   }
@@ -6668,50 +6632,49 @@ footer .cell.copyright span {
 @media print, screen and (min-width: 75em) {
   footer .cell.copyright {
     background-color: transparent;
-    margin-top: 80px;
+    margin-top: 5rem;
   }
 }
 
 @media print, screen and (min-width: 75em) {
   .margin-top-small {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   .margin-top-medium {
-    margin-top: 40px;
+    margin-top: 2.5rem;
   }
   .margin-top-large {
-    margin-top: 80px;
+    margin-top: 5rem;
   }
   .margin-bottom-small {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   .margin-bottom-medium {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
   .margin-bottom-large {
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
   }
   .padding-top-small {
-    padding-top: 20px;
+    padding-top: 1.25rem;
   }
   .padding-top-medium {
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
   .padding-top-large {
-    padding-top: 80px;
+    padding-top: 5rem;
   }
   .padding-bottom-small {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
   .padding-bottom-medium {
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
   }
   .padding-bottom-large {
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
   }
 }
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -6722,8 +6685,8 @@ footer .cell.copyright span {
 }
 
 .pull-text-up {
-  transform: translateY(-160px);
-  margin-bottom: -80px;
+  transform: translateY(-10rem);
+  margin-bottom: -5rem;
 }
 
 .media-module {
@@ -6786,7 +6749,6 @@ footer .cell.copyright span {
 
 .home-hero-module {
   top: 0;
-  position: -webkit-sticky;
   position: sticky;
 }
 .home-hero-module .hero.full {
@@ -6824,7 +6786,6 @@ footer .cell.copyright span {
   height: 100vh;
 }
 .homeLandingPage .landscape {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -6883,7 +6844,7 @@ footer .cell.copyright span {
 @media print, screen and (min-width: 48em) {
   .errorContentPage main .text-module .breadcrumbs {
     width: 50%;
-    margin-left: 50px;
+    margin-left: 3.125rem;
     margin-top: 0;
   }
 }
@@ -7011,12 +6972,9 @@ footer .cell.copyright span {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: fadeInPartial ease 3s;
-          animation: fadeInPartial ease 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fadeInPartial ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .single .blur--transparent:after {
   content: "";
@@ -7025,12 +6983,9 @@ footer .cell.copyright span {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: fadeInPartialLighten ease 3s;
-          animation: fadeInPartialLighten ease 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fadeInPartialLighten ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .single .captions {
   position: relative;
@@ -7203,12 +7158,12 @@ footer .cell.copyright span {
   }
 }
 .single .captions .wordpress-content figure.wp-block-image {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 @media print, screen and (min-width: 75em) {
   .single .captions .wordpress-content figure.wp-block-image {
-    border-right: 10px transparent solid;
-    margin-bottom: 10px;
+    border-right: 0.625rem transparent solid;
+    margin-bottom: 0.625rem;
   }
 }
 .single .captions .wordpress-content blockquote {

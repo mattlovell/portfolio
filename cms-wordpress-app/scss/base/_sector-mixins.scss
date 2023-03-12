@@ -1,7 +1,3 @@
-
-
-// to refactor for v2
-
 @mixin pull-text-up($distance) {
     transform: translateY(-$distance);
     margin-bottom: -($distance*0.5);

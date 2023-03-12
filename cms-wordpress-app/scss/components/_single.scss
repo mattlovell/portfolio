@@ -38,9 +38,6 @@
             top: 160px;
         }
 
-
-
-
         .textarea--transparent, .textarea--white {
             backdrop-filter: none;
             background: none;
@@ -144,10 +141,10 @@
                 }
 
                 &.wp-block-image {
-                    margin-bottom: 10px;
+                    margin-bottom: 0.625rem;
                     @include breakpoint(large){
-                        border-right: 10px transparent solid;
-                        margin-bottom: 10px;
+                        border-right: 0.625rem transparent solid;
+                        margin-bottom: 0.625rem;
                     }
 
                 }

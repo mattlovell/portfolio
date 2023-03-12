@@ -67,21 +67,9 @@ nav.navigation {
 
         li {
             padding: 0 10px 0 0px;
-            // float: left;
-            // opacity: 0;
             font-size: rem-calc(12px);
             font-weight: 400;
 
-            // @include breakpoint(large) {
-            //     margin-right: $small-spacing;
-            //     opacity: 1;
-            //     font-size: rem-calc(13px);
-            // }
-
-            // @include breakpoint(xlarge) {
-            //     margin-right: $large-spacing;
-            // }
- 
             &:last-child {
                 margin-right: 0;
             }

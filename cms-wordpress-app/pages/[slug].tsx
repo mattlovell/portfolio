@@ -41,7 +41,6 @@ export default function Page({page}) {
               </Head>
               <PageHeader
                 title={page?.title}
-                coverImage={page?.featuredImage}
                 date={page?.date}
                 content={page?.content}
               />
