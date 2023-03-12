@@ -59,7 +59,23 @@
     position: fixed;
     top: 0;
 }
-
+.pinned-to-bottom {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 10000;
+}
 .pull-text-up {
     @include pull-text-up($xlarge-spacing);
+}
+.rotate90 {
+    transform: rotate(90deg);
+}
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+.backgroundWhite{
+    background-color: $white;
+    padding: 0.5em 1em;
 }

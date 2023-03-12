@@ -20,6 +20,7 @@ export default function Index({preview, testPosts:{nodes} }) {
       <Container>
         <Intro></Intro>
         {<AllStoriesAlt posts={stuff}/>}
+
       </Container>
     </Layout>
   )

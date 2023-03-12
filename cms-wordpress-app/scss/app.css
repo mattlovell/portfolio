@@ -5909,6 +5909,38 @@ ul.no-bullet, ol.no-bullet {
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-fixed-top {
+  position: fixed !important;
+  top: 0rem !important;
+  right: 0rem !important;
+  left: 0rem !important;
+  z-index: 975;
+}
+
+.position-fixed-bottom {
+  position: fixed !important;
+  right: 0rem !important;
+  bottom: 0rem !important;
+  left: 0rem !important;
+  z-index: 975;
+}
+
 .logo {
   z-index: 99;
   display: flex;
@@ -6572,7 +6604,6 @@ footer {
   position: relative;
   color: #fff;
   text-align: center;
-  z-index: 1;
 }
 @media print, screen and (min-width: 48em) {
   footer {
@@ -6684,9 +6715,29 @@ footer .cell.copyright span {
   top: 0;
 }
 
+.pinned-to-bottom {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10000;
+}
+
 .pull-text-up {
   transform: translateY(-10rem);
   margin-bottom: -5rem;
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.backgroundWhite {
+  background-color: #fff;
+  padding: 0.5em 1em;
 }
 
 .media-module {

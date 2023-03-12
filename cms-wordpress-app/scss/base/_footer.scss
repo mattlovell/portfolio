@@ -5,7 +5,6 @@ footer {
     position: relative;
     color: $white;
     text-align: center;
-    z-index: 1;
 
     @include breakpoint(medium) {
         text-align: left;
