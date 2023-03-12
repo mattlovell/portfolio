@@ -21,21 +21,4 @@
     }
 
 
-    body.contactUsContentPage &, 
-    body.journalsLandingPage &, 
-    body.defaultContentPage &, 
-    body.errorContentPage &,
-    body.studioLandingPage &,
-    body.servicesLandingPage {
-        
-        padding-top: $medium-spacing*2;
-        padding-bottom: $medium-spacing;
-
-        @include breakpoint(large) {
-            padding-top: $large-spacing*2;
-            padding-bottom: $large-spacing;
-        }
-
-    }
-
 }
